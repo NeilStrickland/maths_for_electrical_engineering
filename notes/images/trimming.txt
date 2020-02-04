@@ -1,0 +1,4 @@
+flux_patch:   345+310 x 150+205
+normal_field: 345+310 x 150+205
+surface_flux: 345+310 x 150+205
+octant: 315+280 x 90+330

@@ -1,0 +1,175 @@
+\documentclass{amsart}
+\usepackage{tikz}
+\usepackage{fullpage}
+
+\input{../macros/macros}
+
+\begin{document}
+
+\begin{center}
+ \Large MAS243 - examinable formulae
+\end{center}
+
+\section*{Formula sheet}
+
+You will get the following formula sheet in the exam:
+\begin{displaymath}
+\begin{aligned}
+&
+\cos (A\pm B) = \cos A \cos B \mp \sin A \sin B
+\\
+&
+\sin (A \pm B) = \sin A \cos B \pm \cos A \sin B
+\\
+&
+\tan (A \pm B) = \frac {\tan A \pm \tan B}{1 \mp \tan A \tan B}
+\\
+&
+a \cos \theta + b \sin \theta = R \cos (\theta - \alpha )
+{\mbox { where $R={\sqrt {a^{2}+b^{2}}}$ and
+$\cos \alpha = \frac {a}{R}$, $\sin \alpha = \frac {b}{R}$}}
+\\
+&
+\cos ^{2} \theta = \frac {1}{2} \left( \cos 2 \theta +1 \right)
+\\
+&
+\cos ^{3} \theta = \frac {1}{4} \left( 3 \cos \theta +
+\cos 3 \theta \right)
+\\
+&
+\cos ^{4} \theta = \frac {1}{8} \left( 3 + 4 \cos 2 \theta
++ \cos 4 \theta \right)
+\\
+&
+\sin ^{2} \theta = \frac {1}{2} \left( 1 - \cos 2 \theta \right)
+\\
+&
+\sin ^{3} \theta = \frac {1}{4} \left( 3 \sin \theta -\sin 3 \theta
+\right)
+\\
+&
+\sin ^{4} \theta = \frac {1}{8} \left( 3 - 4\cos 2 \theta
++\cos 4 \theta \right)
+\end{aligned}
+\end{displaymath}
+
+\section*{Formulae that you need to know}
+
+\subsection*{Two-dimensional polar coordinates}
+
+\begin{align*}
+ x &= r\cos(\azi) & y &= r\sin(\azi) \\
+ r &= \sqrt{x^2+y^2} & \azi &= \arctan(y/x) \\
+ \ve_r &= (\cos(\azi),\;\sin(\azi)) & \ve_\tht &= (-\sin(\azi),\;\cos(\azi)) \\
+ dA &= r\,dr\,d\tht
+\end{align*}
+
+\subsection*{Cylindrical polar coordinates}
+
+\begin{align*}
+ x &= r\cos(\azi) & y &= r\sin(\azi) \\
+ r &= \sqrt{x^2+y^2} & \azi &= \arctan(y/x) \\
+ \ve_r &= (\cos(\azi),\;\sin(\azi),\;0) &
+ \ve_\tht &= (-\sin(\azi),\;\cos(\azi),\;0) & 
+ \ve_z &= (0,0,1)=\vk \\
+ dV &= r\,dr\,d\azi\,dz
+\end{align*}
+
+\subsection*{Spherical polar coordinates}
+
+\begin{align*}
+ x &= r\cos(\azi)\sin(\zen) &
+   r &= \sqrt{x^2+y^2+z^2} \\
+ y &= r\sin(\azi)\sin(\zen) &
+   \ve_r &= (\cos(\azi)\sin(\zen),\;\sin(\azi)\sin(\zen),\;\cos(\zen)) \\
+ z &= r\cos(\zen) &
+  dV &= r^2\sin(\zen)\,dr\,d\azi\,d\zen
+\end{align*}
+
+\subsection*{Vector algebra}
+
+For vectors $\va=(x,y,z)$ and $\vb=(u,v,w)$ we have
+
+\begin{align*}
+ \va . \vb &= xu+yv+zw & \text{(a scalar)} \\
+ \va\tm\vb &= (yw-zv,\;zu-xw,\;xv-yu) 
+  = \det\bsm \vi & \vj & \vk \\ x & y & z \\ u & v & w \esm 
+   & \text{(a vector)} \\
+ \|\va\| &= \sqrt{x^2+y^2+z^2} = \sqrt{\va.\va} 
+   & \text{(a scalar)} \\
+ \hva &= \frac{\va}{\|\va\|} 
+    = \left(\frac{x}{\sqrt{x^2+y^2+z^2}},\;
+            \frac{y}{\sqrt{x^2+y^2+z^2}},\;
+            \frac{z}{\sqrt{x^2+y^2+z^2}}\right) 
+   & \text{(a vector)}.
+\end{align*}
+
+Now let $\vn$ be another vector, and let $\va_{||}$ and $\va_\perp$ be
+the components of $\va$ parallel and perpendicular to $\vn$.  If $\vn$
+is a unit vector (ie $\|\vn\|=1$) then
+\begin{align*}
+ \va_{||} &= (\va.\vn)\vn &
+ \va_\perp &= \va-\va_{||} = \va - (\va.\vn)\vn.
+\end{align*}
+If $\vn$ is not necessarily a unit vector, we have
+\begin{align*}
+ \va_{||} &= \frac{\va.\vn}{\vn.\vn}\vn = (\va.\hvn)\hvn &
+ \va_\perp &= \va-\va_{||} = \va - \frac{\va.\vn}{\vn.\vn}\vn.
+\end{align*}
+
+\subsection*{Differential operators}
+
+For a scalar field $f$ and a vector field $\vu=(p,q,r)$ we have
+\begin{align*}
+ \nabla(f) = \grad(f) &= (f_x,f_y,f_z)  & \text{(a vector field)} \\
+ \nabla^2(f) &= f_{xx}+f_{yy}+f_{zz} & \text{(a scalar field)} \\
+ \nabla.\vu = \dv(\vu) &= p_x+q_y+r_z  & \text{(a scalar field)} \\
+ \nabla\tm\vu = \curl(\vu) &=
+  (r_y-q_z,\;p_z-r_x,\;q_x-p_y)
+   = \det \bbm \vi & \vj & \vk \\ \ddx & \ddy & \ddz \\ p & q & r \ebm
+    & \text{(a vector field)} \\
+ \\
+ \nabla^2(\vu) &= (\nabla^2(p),\;\nabla^2(q),\;\nabla^2(r)) \\
+  &= (p_{xx}+p_{yy}+p_{zz},\;q_{xx}+q_{yy}+q_{zz},\;r_{xx}+r_{yy}+r_{zz})
+     & \text{(a vector field)} \\
+\end{align*}
+
+\subsection*{Geometry of surfaces}
+
+You will need to be able to find the area element $dA$ and the
+analogous vector quantity $d\vA$ for a variety of different
+surfaces.  In some cases it is easiest to find $dA$ and the unit
+normal vector $\vn$ separately and then $d\vA=\vn\,dA$.  In other
+cases it is easiest to find $d\vA$ first and then $dA=\|d\vA\|$ and
+$\vn=d\vA/\|d\vA\|$.  In some cases the formulae below will give the
+inward normal when we want the outward normal, in which case we just
+need to multiply by minus one.
+
+\begin{itemize}
+ \item[(a)] For a surface where the position vector $\vr=(x,y,z)$ is
+  given in terms of two parameters $u$ and $v$, we have 
+  \[ d\vA = \vr_u \tm \vr_v \;du\,dv =
+      (x_u,y_u,z_u)\tm(x_v,y_v,z_v)\;du\,dv.
+  \]
+ \item[(b)] For a surface given in the form $z=f(x,y)$ we have
+  \[ d\vA = (-f_x,-f_y,1) \,dx\,dy. \]
+ \item[(c)] For the curved surface of a cylinder of radius $a$ centred
+  on the $z$-axis, we have 
+  \begin{align*}
+   \vn &= (\cos(\azi),\sin(\azi),0) \\
+   dA &= a\,dr\,dz 
+  \end{align*}
+ \item[(d)] For a sphere of radius $a$ centred at the origin, we have 
+  \begin{align*}
+   \vn &= (\cos(\azi)\sin(\zen),\;\sin(\azi)\sin(\zen),\;\cos(\zen))
+   \\
+   dA &= a^2\sin(\zen) d\azi\,d\zen 
+  \end{align*}
+\end{itemize}
+
+\section*{Other formulae}
+
+If you need any other formulae in the exam, then the exam question
+will state the relevant formulae.
+
+\end{document}

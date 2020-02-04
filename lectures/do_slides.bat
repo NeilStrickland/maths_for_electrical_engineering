@@ -1,0 +1,22 @@
+pdflatex lecture01.tex
+pdflatex lecture02.tex
+pdflatex lecture03.tex
+pdflatex lecture04.tex
+pdflatex lecture05.tex
+pdflatex lecture06.tex
+pdflatex lecture07.tex
+pdflatex lecture08.tex
+pdflatex lecture09.tex
+pdflatex lecture10.tex
+pdflatex lecture11.tex
+pdflatex lecture12.tex
+pdflatex lecture13.tex
+pdflatex lecture14.tex
+pdflatex lecture15.tex
+pdflatex lecture16.tex
+pdflatex lecture17.tex
+pdflatex lecture18.tex
+pdflatex lecture19.tex
+pdflatex lecture20.tex
+pdflatex lecture21.tex
+

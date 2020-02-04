@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="15" minor="1"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false"></View-Properties>
+<MapleNet-Properties elisiondigitsbefore="100" labelling="true" indentamount="4" elisiontermsthreshold="10000" ansi="false" errorbreak="1" useclientjvm="true" echo="1" imaginaryunit="I" labelwidth="20" contextmenusize="automatic" plotdriver="opengl" elisiondigitsafter="100" plotoutput="terminal" helpbrowser="standard" rtablesize="10" elisiontermsbefore="100" elisiondigitsthreshold="10000" typesetting="standard" plotdevice="inline" verboseproc="1" showassumed="1" errorcursor="false" longdelim="true" plotoptions="" quiet="false" elisiontermsafter="100" screenwidth="79" preplot="" prettyprint="3" displayprecision="-1" screenpixelheight="1080" warnlevel="3" screenheight="25" latexwidth="6.0" postplot="" prompt="&gt; " ShowLabels="true"/>
+<Styles><Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+</Styles>
+<Task-table>
+    <Task-category name="&lt;default&gt;">
+    </Task-category>
+</Task-table>
+<Task>
+</Task>
+<Group labelreference="L1" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L3" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">with(plots): with(plottools):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">L := []:
+S := &quot;&quot;:
+for i from 0 to 20 do
+ for j from 0 to 20 do
+  x := -4 + 0.4*i;
+  y := -2 + 0.2*j;
+  if x^2+y^2 &gt;= 1 then
+   u := 1 - (x^2-y^2)/(x^2+y^2)^2;
+   v := -2*x*y/(x^2+y^2)^2;
+   xx := x+u/5;
+   yy := y+v/5;
+   L := [op(L),line([x,y],[xx,yy])];
+   S := cat(S,<Font encoding="UTF-8">sprintf(&quot;\134\134draw[blue,-&gt;] (%2.2f,%2.2f) -- (%2.2f,%2.2f);\134n&quot;,x,y,xx,yy));</Font>
+  fi;
+ od:
+od:
+display(op(L),scaling=constrained,axes=none);
+printf(S);
+</Text-field>
+</Input>
+<Output>
+<Text-field style="Maple Plot" layout="Maple Plot"><Plot height="400" type="two-dimensional" width="400" plot-scale="1.0" plot-xtrans="0.0" plot-ytrans="0.0" gridlinevisibility="1" legendvisibility="false">LSUlUExPVEc2Y2RsLSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkISM/ISIiNyQkISUxUSEiJCQhJTM/ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkISM9ISIiNyQkISspKVIqbyFRISIqJCErXCt5Mj0hIiotJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQhIzshIiI3JCQhKkAueSFRISIpJCErSDtWMjshIiotJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQhIzkhIiI3JCQhKzlgcTNRISIqJCEqVFdwUyIhIiktJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQhIzchIiI3JCQhKjZ1JjRRISIpJCEpRUoxNyEiKC0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCEjNSEiIjckJCErQjFRNVEhIiokIStLamAwNSEiKi0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCEiKSEiIjckJCErdlk0NlEhIiokISs2eUFZISkhIzUtJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQhIichIiI3JCQhK0FwbzZRISIqJCErInpuZS4nISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkISIlISIiNyQkIStrNjg3USEiKiQhKyx1XUNTISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkISIjISIiNyQkIStSbVM3USEiKiQhK014Vjc/ISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkIiIhISIiNyQkISZEIlEhIiUkIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkIiIjISIiNyQkIStSbVM3USEiKiQiK014Vjc/ISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkIiIlISIiNyQkIStrNjg3USEiKiQiKyx1XUNTISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkIiInISIiNyQkIStBcG82USEiKiQiKyJ6bmUuJyEjNS0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCIiKSEiIjckJCErdlk0NlEhIiokIis2eUFZISkhIzUtJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQiIzUhIiI3JCQhK0IxUTVRISIqJCIrS2pgMDUhIiotJSdDVVJWRVNHNiM3JDckJCEjUyEiIiQiIzchIiI3JCQhKjZ1JjRRISIpJCIpRUoxNyEiKC0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCIjOSEiIjckJCErOWBxM1EhIiokIipUV3BTIiEiKS0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCIjOyEiIjckJCEqQC55IVEhIikkIitIO1YyOyEiKi0lJ0NVUlZFU0c2IzckNyQkISNTISIiJCIjPSEiIjckJCErKSlSKm8hUSEiKiQiK1wreTI9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI1MhIiIkIiM/ISIiNyQkISUxUSEiJCQiJTM/ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkISM/ISIiNyQkISt2KkhpUyQhIiokISpZNyssIyEiKS0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCEjPSEiIjckJCErMnVTMk0hIiokIStWbCgpND0hIiotJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQhIzshIiI3JCQhK1xgajNNISIqJCEqSmwmNDshIiktJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQhIzkhIiI3JCQhKzlIKSk0TSEiKiQhK1ZqMDQ5ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkISM3ISIiNyQkISs2NjY2TSEiKiQhK0xMTDM3ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkISM1ISIiNyQkISs+VEY3TSEiKiQhKy0iKlEyNSEiKi0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCEiKSEiIjckJCErKnpATFQkISIqJCErUFBHaSEpISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkISInISIiNyQkISskUi5VVCQhIiokIStZdHBbZyEjNS0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCEiJSEiIjckJCEpQChbVCQhIigkIStEQVlMUyEjNS0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCEiIyEiIjckJCErVCoqRzpNISIqJCEqVVRxLCMhIiotJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQiIiEhIiI3JCQhKyo0S2FUJCEiKiQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQiIiMhIiI3JCQhK1QqKkc6TSEiKiQiKlVUcSwjISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkIiIlISIiNyQkISlAKFtUJCEiKCQiK0RBWUxTISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkIiInISIiNyQkISskUi5VVCQhIiokIitZdHBbZyEjNS0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCIiKSEiIjckJCErKnpATFQkISIqJCIrUFBHaSEpISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkIiM1ISIiNyQkISs+VEY3TSEiKiQiKy0iKlEyNSEiKi0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCIjNyEiIjckJCErNjY2Nk0hIiokIitMTEwzNyEiKi0lJ0NVUlZFU0c2IzckNyQkISNPISIiJCIjOSEiIjckJCErOUgpKTRNISIqJCIrVmowNDkhIiotJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQiIzshIiI3JCQhK1xgajNNISIqJCIqSmwmNDshIiktJSdDVVJWRVNHNiM3JDckJCEjTyEiIiQiIz0hIiI3JCQhKzJ1UzJNISIqJCIrVmwoKTQ9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI08hIiIkIiM/ISIiNyQkISt2KkhpUyQhIiokIipZNyssIyEiKS0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCEjPyEiIjckJCErRVg6MUkhIiokIStwWWk3PyEiKi0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCEjPSEiIjckJCErblhxMkkhIiokISs7JnpFIj0hIiotJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQhIzshIiI3JCQhKHYkNEkhIickISZEaCIhIiUtJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQhIzkhIiI3JCQhK1RnNzZJISIqJCErdShSP1QiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0shIiIkISM3ISIiNyQkISsyNiFILCQhIiokIStbImY3QCIhIiotJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQhIzUhIiI3JCQhK3V1aTlJISIqJCErJWVKLCwiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0shIiIkISIpISIiNyQkIStCKD5pLCQhIiokISo+MGwzKSEiKi0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCEiJyEiIjckJCEqTCdlPEkhIikkIStGPE5vZyEjNS0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCEiJSEiIjckJCErYCFSJz1JISIqJCEreXNMWlMhIzUtJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQhIiMhIiI3JCQhKiZRST5JISIpJCErUldBQz8hIzUtJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQiIiEhIiI3JCQhKkRKJj5JISIpJCIiISEiIi0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCIiIyEiIjckJCEqJlFJPkkhIikkIitSV0FDPyEjNS0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCIiJSEiIjckJCErYCFSJz1JISIqJCIreXNMWlMhIzUtJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQiIichIiI3JCQhKkwnZTxJISIpJCIrRjxOb2chIzUtJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQiIikhIiI3JCQhK0IoPmksJCEiKiQiKj4wbDMpISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0shIiIkIiM1ISIiNyQkISt1dWk5SSEiKiQiKyVlSiwsIiEiKi0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCIjNyEiIjckJCErMjYhSCwkISIqJCIrWyJmN0AiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0shIiIkIiM5ISIiNyQkIStUZzc2SSEiKiQiK3UoUj9UIiEiKi0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCIjOyEiIjckJCEodiQ0SSEiJyQiJkRoIiEiJS0lJ0NVUlZFU0c2IzckNyQkISNLISIiJCIjPSEiIjckJCErblhxMkkhIiokIis7JnpFIj0hIiotJSdDVVJWRVNHNiM3JDckJCEjSyEiIiQiIz8hIiI3JCQhK0VYOjFJISIqJCIrcFlpNz8hIiotJSdDVVJWRVNHNiM3JDckJCEjRyEiIiQhIz8hIiI3JCQhK14leWFnIyEiKiQhKzwpeWYsIyEiKi0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEjPSEiIjckJCErMlJcMkUhIiokIStKOVU7PSEiKi0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEjOyEiIjckJCErOUx3NEUhIiokIStaIW9saCIhIiotJSdDVVJWRVNHNiM3JDckJCEjRyEiIiQhIzkhIiI3JCQhKykqW0M3RSEiKiQhK0psSzs5ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkISM3ISIiNyQkIStlSydbaCMhIiokIStAa2c6NyEiKi0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEjNSEiIjckJCErJXkwdmgjISIqJCErQEFMOTUhIiotJSdDVVJWRVNHNiM3JDckJCEjRyEiIiQhIikhIiI3JCQhKiNcLT9FISIpJCErLSYqZkMiKSEjNS0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEiJyEiIjckJCEraSdbQWkjISIqJCErNzAlKio0JyEjNS0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEiJSEiIjckJCElQ0UhIiQkISQyJSEiJC0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCEiIyEiIjckJCErUUk3REUhIiokISsyVDJPPyEjNS0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCIiISEiIjckJCErLy1eREUhIiokIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiIjISIiNyQkIStRSTdERSEiKiQiKzJUMk8/ISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiIlISIiNyQkISVDRSEiJCQiJDIlISIkLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiInISIiNyQkIStpJ1tBaSMhIiokIis3MCUqKjQnISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiIpISIiNyQkISojXC0/RSEiKSQiKy0mKmZDIikhIzUtJSdDVVJWRVNHNiM3JDckJCEjRyEiIiQiIzUhIiI3JCQhKyV5MHZoIyEiKiQiK0BBTDk1ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiM3ISIiNyQkIStlSydbaCMhIiokIitAa2c6NyEiKi0lJ0NVUlZFU0c2IzckNyQkISNHISIiJCIjOSEiIjckJCErKSpbQzdFISIqJCIrSmxLOzkhIiotJSdDVVJWRVNHNiM3JDckJCEjRyEiIiQiIzshIiI3JCQhKzlMdzRFISIqJCIrWiFvbGgiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiM9ISIiNyQkISsyUlwyRSEiKiQiK0o5VTs9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0chIiIkIiM/ISIiNyQkISteJXlhZyMhIiokIis8KXlmLCMhIiotJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQhIz8hIiI3JCQhK1ZfcC5BISIqJCErc2U6Pz8hIiotJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQhIz0hIiI3JCQhK0FBQTFBISIqJCErTExMQD0hIiotJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQhIzshIiI3JCQhK2liQzRBISIqJCErXCQqPUE7ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkISM5ISIiNyQkISotX0ZAIyEiKSQhK1Q0YkE5ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkISM3ISIiNyQkIStubW07QSEiKiQhK0FBQUE3ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkISM1ISIiNyQkISsvRSQzQSMhIiokIStvdytANSEiKi0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCEiKSEiIjckJCElREEhIiQkISZ2PSkhIiYtJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQhIichIiI3JCQhK2pdJClHQSEiKiQhKzBxeWBoISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkISIlISIiNyQkIStMdyY+QiMhIiokIStHIXAmNFQhIzUtJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQhIiMhIiI3JCQhK01yK01BISIqJCErNlwyZD8hIzUtJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQiIiEhIiI3JCQhK0FBc01BISIqJCIiISEiIi0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCIiIyEiIjckJCErTXIrTUEhIiokIis2XDJkPyEjNS0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCIiJSEiIjckJCErTHcmPkIjISIqJCIrRyFwJjRUISM1LSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkIiInISIiNyQkIStqXSQpR0EhIiokIiswcXlgaCEjNS0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCIiKSEiIjckJCElREEhIiQkIiZ2PSkhIiYtJSdDVVJWRVNHNiM3JDckJCEjQyEiIiQiIzUhIiI3JCQhKy9FJDNBIyEiKiQiK293K0A1ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkIiM3ISIiNyQkIStubW07QSEiKiQiK0FBQUE3ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkIiM5ISIiNyQkISotX0ZAIyEiKSQiK1Q0YkE5ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhI0MhIiIkIiM7ISIiNyQkIStpYkM0QSEiKiQiK1wkKj1BOyEiKi0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCIjPSEiIjckJCErQUFBMUEhIiokIitMTExAPSEiKi0lJ0NVUlZFU0c2IzckNyQkISNDISIiJCIjPyEiIjckJCErVl9wLkEhIiokIitzZTo/PyEiKi0lJ0NVUlZFU0c2IzckNyQkISM/ISIiJCEjPyEiIjckJCEjPSEiIiQhJUQ/ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkISM9ISIiNyQkISsqeSoqRyE9ISIqJCErKm9ydSM9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkISM7ISIiNyQkIStYQ3AxPSEiKiQhKVV1SDshIigtJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQhIzkhIiI3JCQhK3BmWzY9ISIqJCErNixgSjkhIiotJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQhIzchIiI3JCQhK1E1STw9ISIqJCErWSVSQ0IiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkISM1ISIiNyQkISVDPSEiJCQhJUs1ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkISIpISIiNyQkIStVR0BKPSEiKiQhK2heRShIKSEjNS0lJ0NVUlZFU0c2IzckNyQkISM/ISIiJCEiJyEiIjckJCEqVydIUT0hIikkISspKlJdX2khIzUtJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQhIiUhIiI3JCQhKylweVYlPSEiKiQhK1Y3Ilw9JSEjNS0lJ0NVUlZFU0c2IzckNyQkISM/ISIiJCEiIyEiIjckJCErYVlfWz0hIiokISswJ0ghKTQjISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkIiIhISIiNyQkISQmPSEiIyQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQiIiMhIiI3JCQhK2FZX1s9ISIqJCIrMCdIISk0IyEjNS0lJ0NVUlZFU0c2IzckNyQkISM/ISIiJCIiJSEiIjckJCErKXB5ViU9ISIqJCIrVjciXD0lISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkIiInISIiNyQkISpXJ0hRPSEiKSQiKykqUl1faSEjNS0lJ0NVUlZFU0c2IzckNyQkISM/ISIiJCIiKSEiIjckJCErVUdASj0hIiokIitoXkUoSCkhIzUtJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQiIzUhIiI3JCQhJUM9ISIkJCIlSzUhIiQtJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQiIzchIiI3JCQhK1E1STw9ISIqJCIrWSVSQ0IiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkIiM5ISIiNyQkIStwZls2PSEiKiQiKzYsYEo5ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIz8hIiIkIiM7ISIiNyQkIStYQ3AxPSEiKiQiKVV1SDshIigtJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQiIz0hIiI3JCQhKyp5KipHIT0hIiokIisqb3J1Iz0hIiotJSdDVVJWRVNHNiM3JDckJCEjPyEiIiQiIz8hIiI3JCQhIz0hIiIkIiVEPyEiJC0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEjPyEiIjckJCErYnZJJFIiISIqJCEpVXVIPyEiKC0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEjPSEiIjckJCErJT5kZlIiISIqJCErWVxDTT0hIiotJSdDVVJWRVNHNiM3JDckJCEjOyEiIiQhIzshIiI3JCQhIzkhIiIkISlEMVI7ISIoLSUnQ1VSVkVTRzYjNyQ3JCQhIzshIiIkISM5ISIiNyQkISlPKGVTIiEiKCQhKzlpJlFXIiEiKi0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEjNyEiIjckJCElOTkhIiQkISVbNyEiJC0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEjNSEiIjckJCErLyI9WVUiISIqJCErdScpXF01ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIzshIiIkISIpISIiNyQkISZ2ViIhIiUkISMmKSEiIy0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEiJyEiIjckJCErSFdnXjkhIiokIStBZk9dayEjNS0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCEiJSEiIjckJCErJCopeVtZIiEiKiQhK2gyLVlWISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzshIiIkISIjISIiNyQkISs4aWJ1OSEiKiQhKzciXCQqPSMhIzUtJSdDVVJWRVNHNiM3JDckJCEjOyEiIiQiIiEhIiI3JCQhKEQieTkhIickIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQhIzshIiIkIiIjISIiNyQkISs4aWJ1OSEiKiQiKzciXCQqPSMhIzUtJSdDVVJWRVNHNiM3JDckJCEjOyEiIiQiIiUhIiI3JCQhKyQqKXlbWSIhIiokIitoMi1ZViEjNS0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCIiJyEiIjckJCErSFdnXjkhIiokIitBZk9dayEjNS0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCIiKSEiIjckJCEmdlYiISIlJCIjJikhIiMtJSdDVVJWRVNHNiM3JDckJCEjOyEiIiQiIzUhIiI3JCQhKy8iPVlVIiEiKiQiK3UnKVxdNSEiKi0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCIjNyEiIjckJCElOTkhIiQkIiVbNyEiJC0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCIjOSEiIjckJCEpTyhlUyIhIigkIis5aSZRVyIhIiotJSdDVVJWRVNHNiM3JDckJCEjOyEiIiQiIzshIiI3JCQhIzkhIiIkIilEMVI7ISIoLSUnQ1VSVkVTRzYjNyQ3JCQhIzshIiIkIiM9ISIiNyQkISslPmRmUiIhIiokIitZXENNPSEiKi0lJ0NVUlZFU0c2IzckNyQkISM7ISIiJCIjPyEiIjckJCErYnZJJFIiISIqJCIpVXVIPyEiKC0lJ0NVUlZFU0c2IzckNyQkISM3ISIiJCEjPyEiIjckJCEqaSopcCMpKiEiKiQhK1klUkMuIyEiKi0lJ0NVUlZFU0c2IzckNyQkISM3ISIiJCEjPSEiIjckJCErX1dqTikqISM1JCErS3hXUj0hIiotJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQhIzshIiI3JCQhJCcpKiEiJCQhJVs7ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkISM5ISIiNyQkISstWS41KiohIzUkISspW0oiZTkhIiotJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQhIzchIiI3JCQhIzUhIiIkIStXV1dwNyEiKi0lJ0NVUlZFU0c2IzckNyQkISM3ISIiJCEjNSEiIjckJCErdDR5OTUhIiokISspW0IxMyIhIiotJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQhIikhIiI3JCQhK1tBKXAuIiEiKiQhK2tSZCgpKSkhIzUtJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQhIichIiI3JCQhK25tbW01ISIqJCErKikpKSkpKSlvISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkISIlISIiNyQkISM2ISIiJCEkdiUhIiQtJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQhIiMhIiI3JCQhK0wwJHk3IiEiKiQhKzloRlFDISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiIhISIiNyQkISsqKSkpKSlRNiEiKiQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQiIiMhIiI3JCQhK0wwJHk3IiEiKiQiKzloRlFDISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiIlISIiNyQkISM2ISIiJCIkdiUhIiQtJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQiIichIiI3JCQhK25tbW01ISIqJCIrKikpKSkpKSlvISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiIpISIiNyQkIStbQSlwLiIhIiokIitrUmQoKSkpISM1LSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiM1ISIiNyQkISt0NHk5NSEiKiQiKylbQjEzIiEiKi0lJ0NVUlZFU0c2IzckNyQkISM3ISIiJCIjNyEiIjckJCEjNSEiIiQiK1dXV3A3ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiM5ISIiNyQkISstWS41KiohIzUkIispW0oiZTkhIiotJSdDVVJWRVNHNiM3JDckJCEjNyEiIiQiIzshIiI3JCQhJCcpKiEiJCQiJVs7ISIkLSUnQ1VSVkVTRzYjNyQ3JCQhIzchIiIkIiM9ISIiNyQkIStfV2pOKSohIzUkIitLeFdSPSEiKi0lJ0NVUlZFU0c2IzckNyQkISM3ISIiJCIjPyEiIjckJCEqaSopcCMpKiEiKiQiK1klUkMuIyEiKi0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCEjPyEiIjckJCErI2VyeW8mISM1JCErO2xzSD8hIiotJSdDVVJWRVNHNiM3JDckJCEiKSEiIiQhIz0hIiI3JCQhK01nZWFjISM1JCErUjdFUT0hIiotJSdDVVJWRVNHNiM3JDckJCEiKSEiIiQhIzshIiI3JCQhJURjISIlJCEkbCIhIiMtJSdDVVJWRVNHNiM3JDckJCEiKSEiIiQhIzkhIiI3JCQhK2N1WTRjISM1JCErKj1zaVkiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIikhIiIkISM3ISIiNyQkISs5djxJYyEjNSQhKydSZCgpRyIhIiotJSdDVVJWRVNHNiM3JDckJCEiKSEiIiQhIzUhIiI3JCQhKUFJS2QhIikkISlvKCo9NiEiKC0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCEiKSEiIjckJCEiJyEiIiQhJkRjKiEiJi0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCEiJyEiIjckJCEkYychIiQkISQjeiEiJC0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCIiJyEiIjckJCEkYychIiQkIiQjeiEiJC0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCIiKSEiIjckJCEiJyEiIiQiJkRjKiEiJi0lJ0NVUlZFU0c2IzckNyQkISIpISIiJCIjNSEiIjckJCEpQUlLZCEiKSQiKW8oKj02ISIoLSUnQ1VSVkVTRzYjNyQ3JCQhIikhIiIkIiM3ISIiNyQkISs5djxJYyEjNSQiKydSZCgpRyIhIiotJSdDVVJWRVNHNiM3JDckJCEiKSEiIiQiIzkhIiI3JCQhK2N1WTRjISM1JCIrKj1zaVkiISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIikhIiIkIiM7ISIiNyQkISVEYyEiJSQiJGwiISIjLSUnQ1VSVkVTRzYjNyQ3JCQhIikhIiIkIiM9ISIiNyQkIStNZ2VhYyEjNSQiK1I3RVE9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIikhIiIkIiM/ISIiNyQkISsjZXJ5byYhIzUkIis7bHNIPyEiKi0lJ0NVUlZFU0c2IzckNyQkISIlISIiJCEjPyEiIjckJCErPUlAYzohIzUkIStDNlw9PyEiKi0lJ0NVUlZFU0c2IzckNyQkISIlISIiJCEjPSEiIjckJCErRyFHclkiISM1JCErJlw4XCM9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIiUhIiIkISM7ISIiNyQkIStzNUBeOCEjNSQhK3c/Z007ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIiUhIiIkISM5ISIiNyQkISsvSysqPiIhIzUkISssKVIpXDkhIiotJSdDVVJWRVNHNiM3JDckJCEiJSEiIiQhIzchIiI3JCQhIiIhIiIkISV2NyEiJC0lJ0NVUlZFU0c2IzckNyQkISIlISIiJCEjNSEiIjckJCEqRWpbXighIzUkIStrZyEqPTYhIiotJSdDVVJWRVNHNiM3JDckJCEiJSEiIiQiIzUhIiI3JCQhKkVqW14oISM1JCIra2chKj02ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIiUhIiIkIiM3ISIiNyQkISIiISIiJCIldjchIiQtJSdDVVJWRVNHNiM3JDckJCEiJSEiIiQiIzkhIiI3JCQhKy9LKyo+IiEjNSQiKywpUilcOSEiKi0lJ0NVUlZFU0c2IzckNyQkISIlISIiJCIjOyEiIjckJCErczVAXjghIzUkIit3P2dNOyEiKi0lJ0NVUlZFU0c2IzckNyQkISIlISIiJCIjPSEiIjckJCErRyFHclkiISM1JCIrJlw4XCM9ISIqLSUnQ1VSVkVTRzYjNyQ3JCQhIiUhIiIkIiM/ISIiNyQkISs9SUBjOiEjNSQiK0M2XD0/ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkISM/ISIiNyQkIiNEISIjJCEjPyEiIi0lJ0NVUlZFU0c2IzckNyQkIiIhISIiJCEjPSEiIjckJCIqJlJHPEUhIiokISM9ISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkISM7ISIiNyQkIidEInkjISInJCEjOyEiIi0lJ0NVUlZFU0c2IzckNyQkIiIhISIiJCEjOSEiIjckJCIrayIzLy0kISM1JCEjOSEiIi0lJ0NVUlZFU0c2IzckNyQkIiIhISIiJCEjNyEiIjckJCIrKSkpKSkpKVEkISM1JCEjNyEiIi0lJ0NVUlZFU0c2IzckNyQkIiIhISIiJCEjNSEiIjckJCIiJSEiIiQhIzUhIiItJSdDVVJWRVNHNiM3JDckJCIiISEiIiQiIzUhIiI3JCQiIiUhIiIkIiM1ISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkIiM3ISIiNyQkIispKSkpKSkpUSQhIzUkIiM3ISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkIiM5ISIiNyQkIitrIjMvLSQhIzUkIiM5ISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkIiM7ISIiNyQkIidEInkjISInJCIjOyEiIi0lJ0NVUlZFU0c2IzckNyQkIiIhISIiJCIjPSEiIjckJCIqJlJHPEUhIiokIiM9ISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIiEhIiIkIiM/ISIiNyQkIiNEISIjJCIjPyEiIi0lJ0NVUlZFU0c2IzckNyQkIiIlISIiJCEjPyEiIjckJCIrIylweVZrISM1JCErdykzOik+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIiUhIiIkISM9ISIiNyQkIitzPihHYCchIzUkISswbDN2PCEiKi0lJ0NVUlZFU0c2IzckNyQkIiIlISIiJCEjOyEiIjckJCIrRyopeVttISM1JCErQ3pSbDohIiotJSdDVVJWRVNHNiM3JDckJCIiJSEiIiQhIzkhIiI3JCQiKyd6Jyo0IW8hIzUkISsqPmcsTiIhIiotJSdDVVJWRVNHNiM3JDckJCIiJSEiIiQhIzchIiI3JCQiIighIiIkISVENiEiJC0lJ0NVUlZFU0c2IzckNyQkIiIlISIiJCEjNSEiIjckJCIrdU9eW3MhIzUkIStlJFI0IikpISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIiUhIiIkIiM1ISIiNyQkIit1T15bcyEjNSQiK2UkUjQiKSkhIzUtJSdDVVJWRVNHNiM3JDckJCIiJSEiIiQiIzchIiI3JCQiIighIiIkIiVENiEiJC0lJ0NVUlZFU0c2IzckNyQkIiIlISIiJCIjOSEiIjckJCIrJ3onKjQhbyEjNSQiKyo+ZyxOIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiIlISIiJCIjOyEiIjckJCIrRyopeVttISM1JCIrQ3pSbDohIiotJSdDVVJWRVNHNiM3JDckJCIiJSEiIiQiIz0hIiI3JCQiK3M+KEdgJyEjNSQiKzBsM3Y8ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIiUhIiIkIiM/ISIiNyQkIisjKXB5VmshIzUkIit3KTM6KT4hIiotJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQhIz8hIiI3JCQiK1VHQEo1ISIqJCErJVt0LSg+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIikhIiIkISM9ISIiNyQkIisoUlRYLiIhIiokIStoKFE8dyIhIiotJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQhIzshIiI3JCQiJnYuIiEiJSQhJGIiISIjLSUnQ1VSVkVTRzYjNyQ3JCQiIikhIiIkISM5ISIiNyQkIithSzBSNSEiKiQhKzZ5c0w4ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIikhIiIkISM3ISIiNyQkIitcQSlwLiIhIiokISsvRUM2NiEiKi0lJ0NVUlZFU0c2IzckNyQkIiIpISIiJCEjNSEiIjckJCIqeXBuLSIhIikkISswP0I1KSkhIzUtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQhIikhIiI3JCQiIzUhIiIkISZ2VichIiYtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQhIichIiI3JCQiJFcqISIkJCEkMyUhIiQtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQiIichIiI3JCQiJFcqISIkJCIkMyUhIiQtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQiIikhIiI3JCQiIzUhIiIkIiZ2VichIiYtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQiIzUhIiI3JCQiKnlwbi0iISIpJCIrMD9CNSkpISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIikhIiIkIiM3ISIiNyQkIitcQSlwLiIhIiokIisvRUM2NiEiKi0lJ0NVUlZFU0c2IzckNyQkIiIpISIiJCIjOSEiIjckJCIrYUswUjUhIiokIis2eXNMOCEiKi0lJ0NVUlZFU0c2IzckNyQkIiIpISIiJCIjOyEiIjckJCImdi4iISIlJCIkYiIhIiMtJSdDVVJWRVNHNiM3JDckJCIiKSEiIiQiIz0hIiI3JCQiKyhSVFguIiEiKiQiK2goUTx3IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiIpISIiJCIjPyEiIjckJCIrVUdASjUhIiokIislW3QtKD4hIiotJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIz8hIiI3JCQiK1E1STw5ISIqJCErYTBjbj4hIiotJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIz0hIiI3JCQiK2JsVjs5ISIqJCErb0FiZzwhIiotJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIzshIiI3JCQiJTk5ISIkJCElXzohIiQtJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIzkhIiI3JCQiKmEnKiozOSEiKSQhKzcmbz1NIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiM3ISIiJCEjNyEiIjckJCIjOSEiIiQhK2NiYkk2ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkISM1ISIiNyQkIitGIT5fUSIhIiokISs8XnckPiohIzUtJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIikhIiI3JCQiK194LGo4ISIqJCErT2dVN3IhIzUtJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIichIiI3JCQiK0xMTEw4ISIqJCErNjY2Nl4hIzUtJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQhIiUhIiI3JCQiIzghIiIkISREJCEiJC0lJ0NVUlZFU0c2IzckNyQkIiM3ISIiJCEiIyEiIjckJCIrbiVwQEYiISIqJCErJylRc2g6ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiIhISIiNyQkIis2NjZoNyEiKiQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQiIiMhIiI3JCQiK24lcEBGIiEiKiQiKycpUXNoOiEjNS0lJ0NVUlZFU0c2IzckNyQkIiM3ISIiJCIiJSEiIjckJCIjOCEiIiQiJEQkISIkLSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiInISIiNyQkIitMTExMOCEiKiQiKzY2NjZeISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiIpISIiNyQkIitfeCxqOCEiKiQiK09nVTdyISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiM1ISIiNyQkIitGIT5fUSIhIiokIis8XnckPiohIzUtJSdDVVJWRVNHNiM3JDckJCIjNyEiIiQiIzchIiI3JCQiIzkhIiIkIitjYmJJNiEiKi0lJ0NVUlZFU0c2IzckNyQkIiM3ISIiJCIjOSEiIjckJCIqYScqKjM5ISIpJCIrNyZvPU0iISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiM7ISIiNyQkIiU5OSEiJCQiJV86ISIkLSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiM9ISIiNyQkIitibFY7OSEiKiQiK29BYmc8ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIzchIiIkIiM/ISIiNyQkIitRNUk8OSEiKiQiK2EwY24+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkISM/ISIiNyQkIitYQ3AxPSEiKiQhKWVEcT4hIigtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIz0hIiI3JCQiKzFHLy89ISIqJCErYV12bDwhIiotJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIzshIiI3JCQiIz0hIiIkISl2JDRjIiEiKC0lJ0NVUlZFU0c2IzckNyQkIiM7ISIiJCEjOSEiIjckJCIpazcleiIhIigkISsneVZoTiIhIiotJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIzchIiI3JCQiJSd5IiEiJCQhJV82ISIkLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkISM1ISIiNyQkIisnKj1RdjwhIiokIStjSywmXCohIzUtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIikhIiI3JCQiJkR3IiEiJSQhI3YhIiMtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIichIiI3JCQiK3JiUls8ISIqJCEreVNqXGIhIzUtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQhIiUhIiI3JCQiKzI2N048ISIqJCErUiN6UmwkISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkISIjISIiNyQkIisoeVZhcyIhIiokISspKTNsNT0hIzUtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQiIiEhIiI3JCQiKHY9cyIhIickIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiIjISIiNyQkIisoeVZhcyIhIiokIispKTNsNT0hIzUtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQiIiUhIiI3JCQiKzI2N048ISIqJCIrUiN6UmwkISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiInISIiNyQkIityYlJbPCEiKiQiK3lTalxiISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiIpISIiNyQkIiZEdyIhIiUkIiN2ISIjLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiM1ISIiNyQkIisnKj1RdjwhIiokIitjSywmXCohIzUtJSdDVVJWRVNHNiM3JDckJCIjOyEiIiQiIzchIiI3JCQiJSd5IiEiJCQiJV82ISIkLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiM5ISIiNyQkIilrNyV6IiEiKCQiKyd5VmhOIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiM7ISIiJCIjOyEiIjckJCIjPSEiIiQiKXYkNGMiISIoLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiM9ISIiNyQkIisxRy8vPSEiKiQiK2Fddmw8ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIzshIiIkIiM/ISIiNyQkIitYQ3AxPSEiKiQiKWVEcT4hIigtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQhIz8hIiI3JCQiI0EhIiIkISV2PiEiJC0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCEjPSEiIjckJCIrNi01KD4jISIqJCErNiRHRHgiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkISM7ISIiNyQkIitidkkkPiMhIiokISllRHE6ISIoLSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkISM5ISIiNyQkIitKU14pPSMhIiokISsqKSlwJW84ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkISM3ISIiNyQkIitpKilwIz0jISIqJCErYTBjbjYhIiotJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQhIzUhIiI3JCQiJXdAISIkJCEkbyohIiQtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQhIikhIiI3JCQiK2VyeW9AISIqJCErUlt0LXghIzUtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQhIichIiI3JCQiKmMuPDsjISIpJCErLWdcWmQhIzUtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQhIiUhIiI3JCQiKy04aWJAISIqJCErZCgpMzpRISM1LSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkISIjISIiNyQkIitZYFpeQCEiKiQhKyZScT4hPiEjNS0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCIiISEiIjckJCIkOiMhIiMkIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkIiIjISIiNyQkIitZYFpeQCEiKiQiKyZScT4hPiEjNS0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCIiJSEiIjckJCIrLThpYkAhIiokIitkKCkzOlEhIzUtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQiIichIiI3JCQiKmMuPDsjISIpJCIrLWdcWmQhIzUtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQiIikhIiI3JCQiK2VyeW9AISIqJCIrUlt0LXghIzUtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQiIzUhIiI3JCQiJXdAISIkJCIkbyohIiQtJSdDVVJWRVNHNiM3JDckJCIjPyEiIiQiIzchIiI3JCQiK2kqKXAjPSMhIiokIithMGNuNiEiKi0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCIjOSEiIjckJCIrSlNeKT0jISIqJCIrKikpcCVvOCEiKi0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCIjOyEiIjckJCIrYnZJJD4jISIqJCIpZURxOiEiKC0lJ0NVUlZFU0c2IzckNyQkIiM/ISIiJCIjPSEiIjckJCIrNi01KD4jISIqJCIrNiRHRHgiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiIz8hIiIkIiM/ISIiNyQkIiNBISIiJCIldj4hIiQtJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQhIz8hIiI3JCQiK2RaSSdmIyEiKiQhK0dUJSl6PiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCEjPSEiIjckJCIreXh4JGYjISIqJCErbm1teTwhIiotJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQhIzshIiI3JCQiK1FXdiFmIyEiKiQhK14xInlkIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCEjOSEiIjckJCIqKXpDKGUjISIpJCErZiFcdVAiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0MhIiIkISM3ISIiNyQkIitMTEwkZSMhIiokISt5eHh4NiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCEjNSEiIjckJCIrJ1JuInpEISIqJCErQUwjKip5KiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCEiKSEiIjckJCIldkQhIiQkISZEInkhIiYtJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQhIichIiI3JCQiK1BcO3JEISIqJCErJipIQFllISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0MhIiIkISIlISIiNyQkIituQi9vRCEiKiQhK3M0ViEqUSEjNS0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCEiIyEiIjckJCIrbUcqZmMjISIqJCErKjNESCU+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0MhIiIkIiIhISIiNyQkIit5eEZsRCEiKiQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQiIiMhIiI3JCQiK21HKmZjIyEiKiQiKyozREglPiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCIiJSEiIjckJCIrbkIvb0QhIiokIitzNFYhKlEhIzUtJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQiIichIiI3JCQiK1BcO3JEISIqJCIrJipIQFllISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0MhIiIkIiIpISIiNyQkIiV2RCEiJCQiJkQieSEiJi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCIjNSEiIjckJCIrJ1JuInpEISIqJCIrQUwjKip5KiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCIjNyEiIjckJCIrTExMJGUjISIqJCIreXh4eDYhIiotJSdDVVJWRVNHNiM3JDckJCIjQyEiIiQiIzkhIiI3JCQiKil6QyhlIyEiKSQiK2YhXHVQIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCIjOyEiIjckJCIrUVd2IWYjISIqJCIrXjEieWQiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0MhIiIkIiM9ISIiNyQkIit5eHgkZiMhIiokIitubW15PCEiKi0lJ0NVUlZFU0c2IzckNyQkIiNDISIiJCIjPyEiIjckJCIrZFpJJ2YjISIqJCIrR1QlKXo+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkISM/ISIiNyQkIitcOl8lKkghIiokISskPUBTKT4hIiotJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQhIz0hIiI3JCQiKyQ0MUQqSCEiKiQhK3AmeU55IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCEjOyEiIjckJCIrJ29PLSpIISIqJCErYD5WJGUiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkISM5ISIiNyQkIistXnYoKUghIiokIStwTW4kUSIhIiotJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQhIzchIiI3JCQiK1VuOCYpSCEiKiQhK3pOUiU9IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCEjNSEiIjckJCIrO1VcIylIISIqJCErInp4bSYpKiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCEiKSEiIjckJCIqM3YqekghIikkISspXCthKHkhIzUtJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQhIichIiI3JCQiK1E4dnhIISIqJCErKVtmKyFmISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkISIlISIiNyQkIiV3SCEiJCQhJCRSISIkLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkISIjISIiNyQkIitpcChbKEghIiokISskKmUjUic+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkIiIhISIiNyQkIisneipbdUghIiokIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkIiIjISIiNyQkIitpcChbKEghIiokIiskKmUjUic+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkIiIlISIiNyQkIiV3SCEiJCQiJCRSISIkLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkIiInISIiNyQkIitROHZ4SCEiKiQiKylbZishZiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCIiKSEiIjckJCIqM3YqekghIikkIispXCthKHkhIzUtJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQiIzUhIiI3JCQiKztVXCMpSCEiKiQiKyJ6eG0mKSohIzUtJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQiIzchIiI3JCQiK1VuOCYpSCEiKiQiK3pOUiU9IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCIjOSEiIjckJCIrLV52KClIISIqJCIrcE1uJFEiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0chIiIkIiM7ISIiNyQkIisnb08tKkghIiokIitgPlYkZSIhIiotJSdDVVJWRVNHNiM3JDckJCIjRyEiIiQiIz0hIiI3JCQiKyQ0MUQqSCEiKiQiK3AmeU55IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNHISIiJCIjPyEiIjckJCIrXDpfJSpIISIqJCIrJD1AUyk+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkISM/ISIiNyQkIit1YSVRUiQhIiokIStKYFAoKT4hIiotJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQhIz0hIiI3JCQiK0xhSCNSJCEiKiQhKyVbP3R5IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCEjOyEiIjckJCIoRDFSJCEiJyQhJnZlIiEiJS0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCEjOSEiIjckJCIrZlIoKSlRJCEiKiQhK0UtJ3pRIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCEjNyEiIjckJCIrJCopKTQoUSQhIiokIStfM3UpPSIhIiotJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQhIzUhIiI3JCQiK0VEUCZRJCEiKiQhKjslbykqKSohIiotJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQhIikhIiI3JCQiK3gteSRRJCEiKiQhKiJbXDh6ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkISInISIiNyQkIipuOENRJCEiKSQhK3QjWzskZiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCEiJSEiIjckJCIrWjRPIlEkISIqJCErQUZtX1IhIzUtJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQhIiMhIiI3JCQiKjoncCFRJCEiKSQhK2hieHY+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkIiIhISIiNyQkIip2by9RJCEiKSQiIiEhIiItJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQiIiMhIiI3JCQiKjoncCFRJCEiKSQiK2hieHY+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkIiIlISIiNyQkIitaNE8iUSQhIiokIitBRm1fUiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCIiJyEiIjckJCIqbjhDUSQhIikkIit0I1s7JGYhIzUtJSdDVVJWRVNHNiM3JDckJCIjSyEiIiQiIikhIiI3JCQiK3gteSRRJCEiKiQiKiJbXDh6ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkIiM1ISIiNyQkIitFRFAmUSQhIiokIio7JW8pKikqISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkIiM3ISIiNyQkIiskKikpNChRJCEiKiQiK18zdSk9IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCIjOSEiIjckJCIrZlIoKSlRJCEiKiQiK0UtJ3pRIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCIjOyEiIjckJCIoRDFSJCEiJyQiJnZlIiEiJS0lJ0NVUlZFU0c2IzckNyQkIiNLISIiJCIjPSEiIjckJCIrTGFII1IkISIqJCIrJVs/dHkiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI0shIiIkIiM/ISIiNyQkIit1YSVRUiQhIiokIitKYFAoKT4hIiotJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIz8hIiI3JCQiK0QreCR6JCEiKiQhKmEoKSoqKT4hIiktJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIz0hIiI3JCQiKyRmI2YjeiQhIiokIStkTTcheiIhIiotJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIzshIiI3JCQiK15ZTyJ6JCEiKiQhKnBNL2YiISIpLSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkISM5ISIiNyQkIisnMzwseiQhIiokIStkTyU0UiIhIiotJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIzchIiI3JCQiKyopKSkpKSl5JCEiKiQhK25tbSI+IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCEjNSEiIjckJCIrIillcyh5JCEiKiQhKyIpKjNoIyoqISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkISIpISIiNyQkIissI3lteSQhIiokIStqaXJQeiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCEiJyEiIjckJCIrMm16JnkkISIqJCErYUVJXmYhIzUtJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIiUhIiI3JCQiKXo3JnkkISIoJCErdnhgbVIhIzUtJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQhIiMhIiI3JCQiK2YrciV5JCEiKiQhKmVlSCk+ISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkIiIhISIiNyQkIissemMleSQhIiokIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkIiIjISIiNyQkIitmK3IleSQhIiokIiplZUgpPiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCIiJSEiIjckJCIpejcmeSQhIigkIit2eGBtUiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCIiJyEiIjckJCIrMm16JnkkISIqJCIrYUVJXmYhIzUtJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQiIikhIiI3JCQiKywjeW15JCEiKiQiK2ppclB6ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkIiM1ISIiNyQkIisiKWVzKHkkISIqJCIrIikqM2gjKiohIzUtJSdDVVJWRVNHNiM3JDckJCIjTyEiIiQiIzchIiI3JCQiKyopKSkpKSl5JCEiKiQiK25tbSI+IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCIjOSEiIjckJCIrJzM8LHokISIqJCIrZE8lNFIiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI08hIiIkIiM7ISIiNyQkIiteWU8ieiQhIiokIipwTS9mIiEiKS0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCIjPSEiIjckJCIrJGYjZiN6JCEiKiQiK2RNNyF6IiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNPISIiJCIjPyEiIjckJCIrRCt4JHokISIqJCIqYSgpKiopPiEiKS0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEjPyEiIjckJCIlJT4lISIkJCElIyo+ISIkLSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkISM9ISIiNyQkIis3ZzUkPiUhIiokISteKj5BeiIhIiotJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQhIzshIiI3JCQiKnonPiM+JSEiKSQhK3Ikb0RmIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEjOSEiIjckJCIrJ28lSCI+JSEiKiQhKmZiSVIiISIpLSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkISM3ISIiNyQkIioqZVUhPiUhIikkISl1byQ+IiEiKC0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEjNSEiIjckJCIreCQ+Jyo9JSEiKiQhK3ltalcqKiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEiKSEiIjckJCIrRGAhKik9JSEiKiQhKyo9c1AmeiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEiJyEiIjckJCIreUlKKT0lISIqJCErNEE4a2YhIzUtJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQhIiUhIiI3JCQiK08pb3k9JSEiKiQhKypmI1x2UiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCEiIyEiIjckJCIraExmKD0lISIqJCErbUFjKCk+ISM1LSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkIiIhISIiNyQkIiZ2PSUhIiUkIiIhISIiLSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkIiIjISIiNyQkIitoTGYoPSUhIiokIittQWMoKT4hIzUtJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQiIiUhIiI3JCQiK08pb3k9JSEiKiQiKypmI1x2UiEjNS0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCIiJyEiIjckJCIreUlKKT0lISIqJCIrNEE4a2YhIzUtJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQiIikhIiI3JCQiK0RgISopPSUhIiokIisqPXNQJnohIzUtJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQiIzUhIiI3JCQiK3gkPicqPSUhIiokIit5bWpXKiohIzUtJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQiIzchIiI3JCQiKiplVSE+JSEiKSQiKXVvJD4iISIoLSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkIiM5ISIiNyQkIisnbyVIIj4lISIqJCIqZmJJUiIhIiktJSdDVVJWRVNHNiM3JDckJCIjUyEiIiQiIzshIiI3JCQiKnonPiM+JSEiKSQiK3Ikb0RmIiEiKi0lJ0NVUlZFU0c2IzckNyQkIiNTISIiJCIjPSEiIjckJCIrN2c1JD4lISIqJCIrXio+QXoiISIqLSUnQ1VSVkVTRzYjNyQ3JCQiI1MhIiIkIiM/ISIiNyQkIiUlPiUhIiQkIiUjKj4hIiQtJSpBWEVTU1RZTEVHNiMlJU5PTkVHLSUoU0NBTElOR0c2IyUsQ09OU1RSQUlORURHLSUlUk9PVEc2Jy0lKUJPVU5EU19YRzYjJCIjcSEiIi0lKUJPVU5EU19ZRzYjJCIlSTUhIiItJS1CT1VORFNfV0lEVEhHNiMkIiUhKVEhIiItJS5CT1VORFNfSEVJR0hURzYjJCIlUz4hIiItJSlDSElMRFJFTkc2Ig==</Plot></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"><Font encoding="UTF-8">\134draw[blue,-&gt;] (-4.00,-2.00) -- (-3.81,-2.01);
+\134draw[blue,-&gt;] (-4.00,-1.80) -- (-3.81,-1.81);
+\134draw[blue,-&gt;] (-4.00,-1.60) -- (-3.81,-1.61);
+\134draw[blue,-&gt;] (-4.00,-1.40) -- (-3.81,-1.41);
+\134draw[blue,-&gt;] (-4.00,-1.20) -- (-3.81,-1.21);
+\134draw[blue,-&gt;] (-4.00,-1.00) -- (-3.81,-1.01);
+\134draw[blue,-&gt;] (-4.00,-0.80) -- (-3.81,-0.80);
+\134draw[blue,-&gt;] (-4.00,-0.60) -- (-3.81,-0.60);
+\134draw[blue,-&gt;] (-4.00,-0.40) -- (-3.81,-0.40);
+\134draw[blue,-&gt;] (-4.00,-0.20) -- (-3.81,-0.20);
+\134draw[blue,-&gt;] (-4.00,0.00) -- (-3.81,0.00);
+\134draw[blue,-&gt;] (-4.00,0.20) -- (-3.81,0.20);
+\134draw[blue,-&gt;] (-4.00,0.40) -- (-3.81,0.40);
+\134draw[blue,-&gt;] (-4.00,0.60) -- (-3.81,0.60);
+\134draw[blue,-&gt;] (-4.00,0.80) -- (-3.81,0.80);
+\134draw[blue,-&gt;] (-4.00,1.00) -- (-3.81,1.01);
+\134draw[blue,-&gt;] (-4.00,1.20) -- (-3.81,1.21);
+\134draw[blue,-&gt;] (-4.00,1.40) -- (-3.81,1.41);
+\134draw[blue,-&gt;] (-4.00,1.60) -- (-3.81,1.61);
+\134draw[blue,-&gt;] (-4.00,1.80) -- (-3.81,1.81);
+\134draw[blue,-&gt;] (-4.00,2.00) -- (-3.81,2.01);
+\134draw[blue,-&gt;] (-3.60,-2.00) -- (-3.41,-2.01);
+\134draw[blue,-&gt;] (-3.60,-1.80) -- (-3.41,-1.81);
+\134draw[blue,-&gt;] (-3.60,-1.60) -- (-3.41,-1.61);
+\134draw[blue,-&gt;] (-3.60,-1.40) -- (-3.41,-1.41);
+\134draw[blue,-&gt;] (-3.60,-1.20) -- (-3.41,-1.21);
+\134draw[blue,-&gt;] (-3.60,-1.00) -- (-3.41,-1.01);
+\134draw[blue,-&gt;] (-3.60,-0.80) -- (-3.41,-0.81);
+\134draw[blue,-&gt;] (-3.60,-0.60) -- (-3.41,-0.60);
+\134draw[blue,-&gt;] (-3.60,-0.40) -- (-3.41,-0.40);
+\134draw[blue,-&gt;] (-3.60,-0.20) -- (-3.42,-0.20);
+\134draw[blue,-&gt;] (-3.60,0.00) -- (-3.42,0.00);
+\134draw[blue,-&gt;] (-3.60,0.20) -- (-3.42,0.20);
+\134draw[blue,-&gt;] (-3.60,0.40) -- (-3.41,0.40);
+\134draw[blue,-&gt;] (-3.60,0.60) -- (-3.41,0.60);
+\134draw[blue,-&gt;] (-3.60,0.80) -- (-3.41,0.81);
+\134draw[blue,-&gt;] (-3.60,1.00) -- (-3.41,1.01);
+\134draw[blue,-&gt;] (-3.60,1.20) -- (-3.41,1.21);
+\134draw[blue,-&gt;] (-3.60,1.40) -- (-3.41,1.41);
+\134draw[blue,-&gt;] (-3.60,1.60) -- (-3.41,1.61);
+\134draw[blue,-&gt;] (-3.60,1.80) -- (-3.41,1.81);
+\134draw[blue,-&gt;] (-3.60,2.00) -- (-3.41,2.01);
+\134draw[blue,-&gt;] (-3.20,-2.00) -- (-3.01,-2.01);
+\134draw[blue,-&gt;] (-3.20,-1.80) -- (-3.01,-1.81);
+\134draw[blue,-&gt;] (-3.20,-1.60) -- (-3.01,-1.61);
+\134draw[blue,-&gt;] (-3.20,-1.40) -- (-3.01,-1.41);
+\134draw[blue,-&gt;] (-3.20,-1.20) -- (-3.01,-1.21);
+\134draw[blue,-&gt;] (-3.20,-1.00) -- (-3.01,-1.01);
+\134draw[blue,-&gt;] (-3.20,-0.80) -- (-3.02,-0.81);
+\134draw[blue,-&gt;] (-3.20,-0.60) -- (-3.02,-0.61);
+\134draw[blue,-&gt;] (-3.20,-0.40) -- (-3.02,-0.40);
+\134draw[blue,-&gt;] (-3.20,-0.20) -- (-3.02,-0.20);
+\134draw[blue,-&gt;] (-3.20,0.00) -- (-3.02,0.00);
+\134draw[blue,-&gt;] (-3.20,0.20) -- (-3.02,0.20);
+\134draw[blue,-&gt;] (-3.20,0.40) -- (-3.02,0.40);
+\134draw[blue,-&gt;] (-3.20,0.60) -- (-3.02,0.61);
+\134draw[blue,-&gt;] (-3.20,0.80) -- (-3.02,0.81);
+\134draw[blue,-&gt;] (-3.20,1.00) -- (-3.01,1.01);
+\134draw[blue,-&gt;] (-3.20,1.20) -- (-3.01,1.21);
+\134draw[blue,-&gt;] (-3.20,1.40) -- (-3.01,1.41);
+\134draw[blue,-&gt;] (-3.20,1.60) -- (-3.01,1.61);
+\134draw[blue,-&gt;] (-3.20,1.80) -- (-3.01,1.81);
+\134draw[blue,-&gt;] (-3.20,2.00) -- (-3.01,2.01);
+\134draw[blue,-&gt;] (-2.80,-2.00) -- (-2.61,-2.02);
+\134draw[blue,-&gt;] (-2.80,-1.80) -- (-2.61,-1.82);
+\134draw[blue,-&gt;] (-2.80,-1.60) -- (-2.61,-1.62);
+\134draw[blue,-&gt;] (-2.80,-1.40) -- (-2.61,-1.42);
+\134draw[blue,-&gt;] (-2.80,-1.20) -- (-2.61,-1.22);
+\134draw[blue,-&gt;] (-2.80,-1.00) -- (-2.62,-1.01);
+\134draw[blue,-&gt;] (-2.80,-0.80) -- (-2.62,-0.81);
+\134draw[blue,-&gt;] (-2.80,-0.60) -- (-2.62,-0.61);
+\134draw[blue,-&gt;] (-2.80,-0.40) -- (-2.62,-0.41);
+\134draw[blue,-&gt;] (-2.80,-0.20) -- (-2.63,-0.20);
+\134draw[blue,-&gt;] (-2.80,0.00) -- (-2.63,0.00);
+\134draw[blue,-&gt;] (-2.80,0.20) -- (-2.63,0.20);
+\134draw[blue,-&gt;] (-2.80,0.40) -- (-2.62,0.41);
+\134draw[blue,-&gt;] (-2.80,0.60) -- (-2.62,0.61);
+\134draw[blue,-&gt;] (-2.80,0.80) -- (-2.62,0.81);
+\134draw[blue,-&gt;] (-2.80,1.00) -- (-2.62,1.01);
+\134draw[blue,-&gt;] (-2.80,1.20) -- (-2.61,1.22);
+\134draw[blue,-&gt;] (-2.80,1.40) -- (-2.61,1.42);
+\134draw[blue,-&gt;] (-2.80,1.60) -- (-2.61,1.62);
+\134draw[blue,-&gt;] (-2.80,1.80) -- (-2.61,1.82);
+\134draw[blue,-&gt;] (-2.80,2.00) -- (-2.61,2.02);
+\134draw[blue,-&gt;] (-2.40,-2.00) -- (-2.20,-2.02);
+\134draw[blue,-&gt;] (-2.40,-1.80) -- (-2.21,-1.82);
+\134draw[blue,-&gt;] (-2.40,-1.60) -- (-2.21,-1.62);
+\134draw[blue,-&gt;] (-2.40,-1.40) -- (-2.21,-1.42);
+\134draw[blue,-&gt;] (-2.40,-1.20) -- (-2.22,-1.22);
+\134draw[blue,-&gt;] (-2.40,-1.00) -- (-2.22,-1.02);
+\134draw[blue,-&gt;] (-2.40,-0.80) -- (-2.22,-0.82);
+\134draw[blue,-&gt;] (-2.40,-0.60) -- (-2.23,-0.62);
+\134draw[blue,-&gt;] (-2.40,-0.40) -- (-2.23,-0.41);
+\134draw[blue,-&gt;] (-2.40,-0.20) -- (-2.23,-0.21);
+\134draw[blue,-&gt;] (-2.40,0.00) -- (-2.23,0.00);
+\134draw[blue,-&gt;] (-2.40,0.20) -- (-2.23,0.21);
+\134draw[blue,-&gt;] (-2.40,0.40) -- (-2.23,0.41);
+\134draw[blue,-&gt;] (-2.40,0.60) -- (-2.23,0.62);
+\134draw[blue,-&gt;] (-2.40,0.80) -- (-2.22,0.82);
+\134draw[blue,-&gt;] (-2.40,1.00) -- (-2.22,1.02);
+\134draw[blue,-&gt;] (-2.40,1.20) -- (-2.22,1.22);
+\134draw[blue,-&gt;] (-2.40,1.40) -- (-2.21,1.42);
+\134draw[blue,-&gt;] (-2.40,1.60) -- (-2.21,1.62);
+\134draw[blue,-&gt;] (-2.40,1.80) -- (-2.21,1.82);
+\134draw[blue,-&gt;] (-2.40,2.00) -- (-2.20,2.02);
+\134draw[blue,-&gt;] (-2.00,-2.00) -- (-1.80,-2.02);
+\134draw[blue,-&gt;] (-2.00,-1.80) -- (-1.80,-1.83);
+\134draw[blue,-&gt;] (-2.00,-1.60) -- (-1.81,-1.63);
+\134draw[blue,-&gt;] (-2.00,-1.40) -- (-1.81,-1.43);
+\134draw[blue,-&gt;] (-2.00,-1.20) -- (-1.82,-1.23);
+\134draw[blue,-&gt;] (-2.00,-1.00) -- (-1.82,-1.03);
+\134draw[blue,-&gt;] (-2.00,-0.80) -- (-1.83,-0.83);
+\134draw[blue,-&gt;] (-2.00,-0.60) -- (-1.84,-0.63);
+\134draw[blue,-&gt;] (-2.00,-0.40) -- (-1.84,-0.42);
+\134draw[blue,-&gt;] (-2.00,-0.20) -- (-1.85,-0.21);
+\134draw[blue,-&gt;] (-2.00,0.00) -- (-1.85,0.00);
+\134draw[blue,-&gt;] (-2.00,0.20) -- (-1.85,0.21);
+\134draw[blue,-&gt;] (-2.00,0.40) -- (-1.84,0.42);
+\134draw[blue,-&gt;] (-2.00,0.60) -- (-1.84,0.63);
+\134draw[blue,-&gt;] (-2.00,0.80) -- (-1.83,0.83);
+\134draw[blue,-&gt;] (-2.00,1.00) -- (-1.82,1.03);
+\134draw[blue,-&gt;] (-2.00,1.20) -- (-1.82,1.23);
+\134draw[blue,-&gt;] (-2.00,1.40) -- (-1.81,1.43);
+\134draw[blue,-&gt;] (-2.00,1.60) -- (-1.81,1.63);
+\134draw[blue,-&gt;] (-2.00,1.80) -- (-1.80,1.83);
+\134draw[blue,-&gt;] (-2.00,2.00) -- (-1.80,2.02);
+\134draw[blue,-&gt;] (-1.60,-2.00) -- (-1.39,-2.03);
+\134draw[blue,-&gt;] (-1.60,-1.80) -- (-1.40,-1.83);
+\134draw[blue,-&gt;] (-1.60,-1.60) -- (-1.40,-1.64);
+\134draw[blue,-&gt;] (-1.60,-1.40) -- (-1.41,-1.44);
+\134draw[blue,-&gt;] (-1.60,-1.20) -- (-1.41,-1.25);
+\134draw[blue,-&gt;] (-1.60,-1.00) -- (-1.42,-1.05);
+\134draw[blue,-&gt;] (-1.60,-0.80) -- (-1.44,-0.85);
+\134draw[blue,-&gt;] (-1.60,-0.60) -- (-1.45,-0.65);
+\134draw[blue,-&gt;] (-1.60,-0.40) -- (-1.46,-0.43);
+\134draw[blue,-&gt;] (-1.60,-0.20) -- (-1.47,-0.22);
+\134draw[blue,-&gt;] (-1.60,0.00) -- (-1.48,0.00);
+\134draw[blue,-&gt;] (-1.60,0.20) -- (-1.47,0.22);
+\134draw[blue,-&gt;] (-1.60,0.40) -- (-1.46,0.43);
+\134draw[blue,-&gt;] (-1.60,0.60) -- (-1.45,0.65);
+\134draw[blue,-&gt;] (-1.60,0.80) -- (-1.44,0.85);
+\134draw[blue,-&gt;] (-1.60,1.00) -- (-1.42,1.05);
+\134draw[blue,-&gt;] (-1.60,1.20) -- (-1.41,1.25);
+\134draw[blue,-&gt;] (-1.60,1.40) -- (-1.41,1.44);
+\134draw[blue,-&gt;] (-1.60,1.60) -- (-1.40,1.64);
+\134draw[blue,-&gt;] (-1.60,1.80) -- (-1.40,1.83);
+\134draw[blue,-&gt;] (-1.60,2.00) -- (-1.39,2.03);
+\134draw[blue,-&gt;] (-1.20,-2.00) -- (-0.98,-2.03);
+\134draw[blue,-&gt;] (-1.20,-1.80) -- (-0.98,-1.84);
+\134draw[blue,-&gt;] (-1.20,-1.60) -- (-0.99,-1.65);
+\134draw[blue,-&gt;] (-1.20,-1.40) -- (-0.99,-1.46);
+\134draw[blue,-&gt;] (-1.20,-1.20) -- (-1.00,-1.27);
+\134draw[blue,-&gt;] (-1.20,-1.00) -- (-1.01,-1.08);
+\134draw[blue,-&gt;] (-1.20,-0.80) -- (-1.04,-0.89);
+\134draw[blue,-&gt;] (-1.20,-0.60) -- (-1.07,-0.69);
+\134draw[blue,-&gt;] (-1.20,-0.40) -- (-1.10,-0.48);
+\134draw[blue,-&gt;] (-1.20,-0.20) -- (-1.13,-0.24);
+\134draw[blue,-&gt;] (-1.20,0.00) -- (-1.14,0.00);
+\134draw[blue,-&gt;] (-1.20,0.20) -- (-1.13,0.24);
+\134draw[blue,-&gt;] (-1.20,0.40) -- (-1.10,0.48);
+\134draw[blue,-&gt;] (-1.20,0.60) -- (-1.07,0.69);
+\134draw[blue,-&gt;] (-1.20,0.80) -- (-1.04,0.89);
+\134draw[blue,-&gt;] (-1.20,1.00) -- (-1.01,1.08);
+\134draw[blue,-&gt;] (-1.20,1.20) -- (-1.00,1.27);
+\134draw[blue,-&gt;] (-1.20,1.40) -- (-0.99,1.46);
+\134draw[blue,-&gt;] (-1.20,1.60) -- (-0.99,1.65);
+\134draw[blue,-&gt;] (-1.20,1.80) -- (-0.98,1.84);
+\134draw[blue,-&gt;] (-1.20,2.00) -- (-0.98,2.03);
+\134draw[blue,-&gt;] (-0.80,-2.00) -- (-0.57,-2.03);
+\134draw[blue,-&gt;] (-0.80,-1.80) -- (-0.57,-1.84);
+\134draw[blue,-&gt;] (-0.80,-1.60) -- (-0.56,-1.65);
+\134draw[blue,-&gt;] (-0.80,-1.40) -- (-0.56,-1.47);
+\134draw[blue,-&gt;] (-0.80,-1.20) -- (-0.56,-1.29);
+\134draw[blue,-&gt;] (-0.80,-1.00) -- (-0.57,-1.12);
+\134draw[blue,-&gt;] (-0.80,-0.80) -- (-0.60,-0.96);
+\134draw[blue,-&gt;] (-0.80,-0.60) -- (-0.66,-0.79);
+\134draw[blue,-&gt;] (-0.80,0.60) -- (-0.66,0.79);
+\134draw[blue,-&gt;] (-0.80,0.80) -- (-0.60,0.96);
+\134draw[blue,-&gt;] (-0.80,1.00) -- (-0.57,1.12);
+\134draw[blue,-&gt;] (-0.80,1.20) -- (-0.56,1.29);
+\134draw[blue,-&gt;] (-0.80,1.40) -- (-0.56,1.47);
+\134draw[blue,-&gt;] (-0.80,1.60) -- (-0.56,1.65);
+\134draw[blue,-&gt;] (-0.80,1.80) -- (-0.57,1.84);
+\134draw[blue,-&gt;] (-0.80,2.00) -- (-0.57,2.03);
+\134draw[blue,-&gt;] (-0.40,-2.00) -- (-0.16,-2.02);
+\134draw[blue,-&gt;] (-0.40,-1.80) -- (-0.15,-1.82);
+\134draw[blue,-&gt;] (-0.40,-1.60) -- (-0.14,-1.63);
+\134draw[blue,-&gt;] (-0.40,-1.40) -- (-0.12,-1.45);
+\134draw[blue,-&gt;] (-0.40,-1.20) -- (-0.10,-1.28);
+\134draw[blue,-&gt;] (-0.40,-1.00) -- (-0.08,-1.12);
+\134draw[blue,-&gt;] (-0.40,1.00) -- (-0.08,1.12);
+\134draw[blue,-&gt;] (-0.40,1.20) -- (-0.10,1.28);
+\134draw[blue,-&gt;] (-0.40,1.40) -- (-0.12,1.45);
+\134draw[blue,-&gt;] (-0.40,1.60) -- (-0.14,1.63);
+\134draw[blue,-&gt;] (-0.40,1.80) -- (-0.15,1.82);
+\134draw[blue,-&gt;] (-0.40,2.00) -- (-0.16,2.02);
+\134draw[blue,-&gt;] (0.00,-2.00) -- (0.25,-2.00);
+\134draw[blue,-&gt;] (0.00,-1.80) -- (0.26,-1.80);
+\134draw[blue,-&gt;] (0.00,-1.60) -- (0.28,-1.60);
+\134draw[blue,-&gt;] (0.00,-1.40) -- (0.30,-1.40);
+\134draw[blue,-&gt;] (0.00,-1.20) -- (0.34,-1.20);
+\134draw[blue,-&gt;] (0.00,-1.00) -- (0.40,-1.00);
+\134draw[blue,-&gt;] (0.00,1.00) -- (0.40,1.00);
+\134draw[blue,-&gt;] (0.00,1.20) -- (0.34,1.20);
+\134draw[blue,-&gt;] (0.00,1.40) -- (0.30,1.40);
+\134draw[blue,-&gt;] (0.00,1.60) -- (0.28,1.60);
+\134draw[blue,-&gt;] (0.00,1.80) -- (0.26,1.80);
+\134draw[blue,-&gt;] (0.00,2.00) -- (0.25,2.00);
+\134draw[blue,-&gt;] (0.40,-2.00) -- (0.64,-1.98);
+\134draw[blue,-&gt;] (0.40,-1.80) -- (0.65,-1.78);
+\134draw[blue,-&gt;] (0.40,-1.60) -- (0.66,-1.57);
+\134draw[blue,-&gt;] (0.40,-1.40) -- (0.68,-1.35);
+\134draw[blue,-&gt;] (0.40,-1.20) -- (0.70,-1.12);
+\134draw[blue,-&gt;] (0.40,-1.00) -- (0.72,-0.88);
+\134draw[blue,-&gt;] (0.40,1.00) -- (0.72,0.88);
+\134draw[blue,-&gt;] (0.40,1.20) -- (0.70,1.12);
+\134draw[blue,-&gt;] (0.40,1.40) -- (0.68,1.35);
+\134draw[blue,-&gt;] (0.40,1.60) -- (0.66,1.57);
+\134draw[blue,-&gt;] (0.40,1.80) -- (0.65,1.78);
+\134draw[blue,-&gt;] (0.40,2.00) -- (0.64,1.98);
+\134draw[blue,-&gt;] (0.80,-2.00) -- (1.03,-1.97);
+\134draw[blue,-&gt;] (0.80,-1.80) -- (1.03,-1.76);
+\134draw[blue,-&gt;] (0.80,-1.60) -- (1.04,-1.55);
+\134draw[blue,-&gt;] (0.80,-1.40) -- (1.04,-1.33);
+\134draw[blue,-&gt;] (0.80,-1.20) -- (1.04,-1.11);
+\134draw[blue,-&gt;] (0.80,-1.00) -- (1.03,-0.88);
+\134draw[blue,-&gt;] (0.80,-0.80) -- (1.00,-0.64);
+\134draw[blue,-&gt;] (0.80,-0.60) -- (0.94,-0.41);
+\134draw[blue,-&gt;] (0.80,0.60) -- (0.94,0.41);
+\134draw[blue,-&gt;] (0.80,0.80) -- (1.00,0.64);
+\134draw[blue,-&gt;] (0.80,1.00) -- (1.03,0.88);
+\134draw[blue,-&gt;] (0.80,1.20) -- (1.04,1.11);
+\134draw[blue,-&gt;] (0.80,1.40) -- (1.04,1.33);
+\134draw[blue,-&gt;] (0.80,1.60) -- (1.04,1.55);
+\134draw[blue,-&gt;] (0.80,1.80) -- (1.03,1.76);
+\134draw[blue,-&gt;] (0.80,2.00) -- (1.03,1.97);
+\134draw[blue,-&gt;] (1.20,-2.00) -- (1.42,-1.97);
+\134draw[blue,-&gt;] (1.20,-1.80) -- (1.42,-1.76);
+\134draw[blue,-&gt;] (1.20,-1.60) -- (1.41,-1.55);
+\134draw[blue,-&gt;] (1.20,-1.40) -- (1.41,-1.34);
+\134draw[blue,-&gt;] (1.20,-1.20) -- (1.40,-1.13);
+\134draw[blue,-&gt;] (1.20,-1.00) -- (1.39,-0.92);
+\134draw[blue,-&gt;] (1.20,-0.80) -- (1.36,-0.71);
+\134draw[blue,-&gt;] (1.20,-0.60) -- (1.33,-0.51);
+\134draw[blue,-&gt;] (1.20,-0.40) -- (1.30,-0.32);
+\134draw[blue,-&gt;] (1.20,-0.20) -- (1.27,-0.16);
+\134draw[blue,-&gt;] (1.20,0.00) -- (1.26,0.00);
+\134draw[blue,-&gt;] (1.20,0.20) -- (1.27,0.16);
+\134draw[blue,-&gt;] (1.20,0.40) -- (1.30,0.32);
+\134draw[blue,-&gt;] (1.20,0.60) -- (1.33,0.51);
+\134draw[blue,-&gt;] (1.20,0.80) -- (1.36,0.71);
+\134draw[blue,-&gt;] (1.20,1.00) -- (1.39,0.92);
+\134draw[blue,-&gt;] (1.20,1.20) -- (1.40,1.13);
+\134draw[blue,-&gt;] (1.20,1.40) -- (1.41,1.34);
+\134draw[blue,-&gt;] (1.20,1.60) -- (1.41,1.55);
+\134draw[blue,-&gt;] (1.20,1.80) -- (1.42,1.76);
+\134draw[blue,-&gt;] (1.20,2.00) -- (1.42,1.97);
+\134draw[blue,-&gt;] (1.60,-2.00) -- (1.81,-1.97);
+\134draw[blue,-&gt;] (1.60,-1.80) -- (1.80,-1.77);
+\134draw[blue,-&gt;] (1.60,-1.60) -- (1.80,-1.56);
+\134draw[blue,-&gt;] (1.60,-1.40) -- (1.79,-1.36);
+\134draw[blue,-&gt;] (1.60,-1.20) -- (1.79,-1.15);
+\134draw[blue,-&gt;] (1.60,-1.00) -- (1.78,-0.95);
+\134draw[blue,-&gt;] (1.60,-0.80) -- (1.76,-0.75);
+\134draw[blue,-&gt;] (1.60,-0.60) -- (1.75,-0.55);
+\134draw[blue,-&gt;] (1.60,-0.40) -- (1.74,-0.37);
+\134draw[blue,-&gt;] (1.60,-0.20) -- (1.73,-0.18);
+\134draw[blue,-&gt;] (1.60,0.00) -- (1.72,0.00);
+\134draw[blue,-&gt;] (1.60,0.20) -- (1.73,0.18);
+\134draw[blue,-&gt;] (1.60,0.40) -- (1.74,0.37);
+\134draw[blue,-&gt;] (1.60,0.60) -- (1.75,0.55);
+\134draw[blue,-&gt;] (1.60,0.80) -- (1.76,0.75);
+\134draw[blue,-&gt;] (1.60,1.00) -- (1.78,0.95);
+\134draw[blue,-&gt;] (1.60,1.20) -- (1.79,1.15);
+\134draw[blue,-&gt;] (1.60,1.40) -- (1.79,1.36);
+\134draw[blue,-&gt;] (1.60,1.60) -- (1.80,1.56);
+\134draw[blue,-&gt;] (1.60,1.80) -- (1.80,1.77);
+\134draw[blue,-&gt;] (1.60,2.00) -- (1.81,1.97);
+\134draw[blue,-&gt;] (2.00,-2.00) -- (2.20,-1.98);
+\134draw[blue,-&gt;] (2.00,-1.80) -- (2.20,-1.77);
+\134draw[blue,-&gt;] (2.00,-1.60) -- (2.19,-1.57);
+\134draw[blue,-&gt;] (2.00,-1.40) -- (2.19,-1.37);
+\134draw[blue,-&gt;] (2.00,-1.20) -- (2.18,-1.17);
+\134draw[blue,-&gt;] (2.00,-1.00) -- (2.18,-0.97);
+\134draw[blue,-&gt;] (2.00,-0.80) -- (2.17,-0.77);
+\134draw[blue,-&gt;] (2.00,-0.60) -- (2.16,-0.57);
+\134draw[blue,-&gt;] (2.00,-0.40) -- (2.16,-0.38);
+\134draw[blue,-&gt;] (2.00,-0.20) -- (2.15,-0.19);
+\134draw[blue,-&gt;] (2.00,0.00) -- (2.15,0.00);
+\134draw[blue,-&gt;] (2.00,0.20) -- (2.15,0.19);
+\134draw[blue,-&gt;] (2.00,0.40) -- (2.16,0.38);
+\134draw[blue,-&gt;] (2.00,0.60) -- (2.16,0.57);
+\134draw[blue,-&gt;] (2.00,0.80) -- (2.17,0.77);
+\134draw[blue,-&gt;] (2.00,1.00) -- (2.18,0.97);
+\134draw[blue,-&gt;] (2.00,1.20) -- (2.18,1.17);
+\134draw[blue,-&gt;] (2.00,1.40) -- (2.19,1.37);
+\134draw[blue,-&gt;] (2.00,1.60) -- (2.19,1.57);
+\134draw[blue,-&gt;] (2.00,1.80) -- (2.20,1.77);
+\134draw[blue,-&gt;] (2.00,2.00) -- (2.20,1.98);
+\134draw[blue,-&gt;] (2.40,-2.00) -- (2.60,-1.98);
+\134draw[blue,-&gt;] (2.40,-1.80) -- (2.59,-1.78);
+\134draw[blue,-&gt;] (2.40,-1.60) -- (2.59,-1.58);
+\134draw[blue,-&gt;] (2.40,-1.40) -- (2.59,-1.38);
+\134draw[blue,-&gt;] (2.40,-1.20) -- (2.58,-1.18);
+\134draw[blue,-&gt;] (2.40,-1.00) -- (2.58,-0.98);
+\134draw[blue,-&gt;] (2.40,-0.80) -- (2.58,-0.78);
+\134draw[blue,-&gt;] (2.40,-0.60) -- (2.57,-0.58);
+\134draw[blue,-&gt;] (2.40,-0.40) -- (2.57,-0.39);
+\134draw[blue,-&gt;] (2.40,-0.20) -- (2.57,-0.19);
+\134draw[blue,-&gt;] (2.40,0.00) -- (2.57,0.00);
+\134draw[blue,-&gt;] (2.40,0.20) -- (2.57,0.19);
+\134draw[blue,-&gt;] (2.40,0.40) -- (2.57,0.39);
+\134draw[blue,-&gt;] (2.40,0.60) -- (2.57,0.58);
+\134draw[blue,-&gt;] (2.40,0.80) -- (2.58,0.78);
+\134draw[blue,-&gt;] (2.40,1.00) -- (2.58,0.98);
+\134draw[blue,-&gt;] (2.40,1.20) -- (2.58,1.18);
+\134draw[blue,-&gt;] (2.40,1.40) -- (2.59,1.38);
+\134draw[blue,-&gt;] (2.40,1.60) -- (2.59,1.58);
+\134draw[blue,-&gt;] (2.40,1.80) -- (2.59,1.78);
+\134draw[blue,-&gt;] (2.40,2.00) -- (2.60,1.98);
+\134draw[blue,-&gt;] (2.80,-2.00) -- (2.99,-1.98);
+\134draw[blue,-&gt;] (2.80,-1.80) -- (2.99,-1.78);
+\134draw[blue,-&gt;] (2.80,-1.60) -- (2.99,-1.58);
+\134draw[blue,-&gt;] (2.80,-1.40) -- (2.99,-1.38);
+\134draw[blue,-&gt;] (2.80,-1.20) -- (2.99,-1.18);
+\134draw[blue,-&gt;] (2.80,-1.00) -- (2.98,-0.99);
+\134draw[blue,-&gt;] (2.80,-0.80) -- (2.98,-0.79);
+\134draw[blue,-&gt;] (2.80,-0.60) -- (2.98,-0.59);
+\134draw[blue,-&gt;] (2.80,-0.40) -- (2.98,-0.39);
+\134draw[blue,-&gt;] (2.80,-0.20) -- (2.97,-0.20);
+\134draw[blue,-&gt;] (2.80,0.00) -- (2.97,0.00);
+\134draw[blue,-&gt;] (2.80,0.20) -- (2.97,0.20);
+\134draw[blue,-&gt;] (2.80,0.40) -- (2.98,0.39);
+\134draw[blue,-&gt;] (2.80,0.60) -- (2.98,0.59);
+\134draw[blue,-&gt;] (2.80,0.80) -- (2.98,0.79);
+\134draw[blue,-&gt;] (2.80,1.00) -- (2.98,0.99);
+\134draw[blue,-&gt;] (2.80,1.20) -- (2.99,1.18);
+\134draw[blue,-&gt;] (2.80,1.40) -- (2.99,1.38);
+\134draw[blue,-&gt;] (2.80,1.60) -- (2.99,1.58);
+\134draw[blue,-&gt;] (2.80,1.80) -- (2.99,1.78);
+\134draw[blue,-&gt;] (2.80,2.00) -- (2.99,1.98);
+\134draw[blue,-&gt;] (3.20,-2.00) -- (3.39,-1.99);
+\134draw[blue,-&gt;] (3.20,-1.80) -- (3.39,-1.79);
+\134draw[blue,-&gt;] (3.20,-1.60) -- (3.39,-1.59);
+\134draw[blue,-&gt;] (3.20,-1.40) -- (3.39,-1.39);
+\134draw[blue,-&gt;] (3.20,-1.20) -- (3.39,-1.19);
+\134draw[blue,-&gt;] (3.20,-1.00) -- (3.39,-0.99);
+\134draw[blue,-&gt;] (3.20,-0.80) -- (3.38,-0.79);
+\134draw[blue,-&gt;] (3.20,-0.60) -- (3.38,-0.59);
+\134draw[blue,-&gt;] (3.20,-0.40) -- (3.38,-0.40);
+\134draw[blue,-&gt;] (3.20,-0.20) -- (3.38,-0.20);
+\134draw[blue,-&gt;] (3.20,0.00) -- (3.38,0.00);
+\134draw[blue,-&gt;] (3.20,0.20) -- (3.38,0.20);
+\134draw[blue,-&gt;] (3.20,0.40) -- (3.38,0.40);
+\134draw[blue,-&gt;] (3.20,0.60) -- (3.38,0.59);
+\134draw[blue,-&gt;] (3.20,0.80) -- (3.38,0.79);
+\134draw[blue,-&gt;] (3.20,1.00) -- (3.39,0.99);
+\134draw[blue,-&gt;] (3.20,1.20) -- (3.39,1.19);
+\134draw[blue,-&gt;] (3.20,1.40) -- (3.39,1.39);
+\134draw[blue,-&gt;] (3.20,1.60) -- (3.39,1.59);
+\134draw[blue,-&gt;] (3.20,1.80) -- (3.39,1.79);
+\134draw[blue,-&gt;] (3.20,2.00) -- (3.39,1.99);
+\134draw[blue,-&gt;] (3.60,-2.00) -- (3.79,-1.99);
+\134draw[blue,-&gt;] (3.60,-1.80) -- (3.79,-1.79);
+\134draw[blue,-&gt;] (3.60,-1.60) -- (3.79,-1.59);
+\134draw[blue,-&gt;] (3.60,-1.40) -- (3.79,-1.39);
+\134draw[blue,-&gt;] (3.60,-1.20) -- (3.79,-1.19);
+\134draw[blue,-&gt;] (3.60,-1.00) -- (3.79,-0.99);
+\134draw[blue,-&gt;] (3.60,-0.80) -- (3.79,-0.79);
+\134draw[blue,-&gt;] (3.60,-0.60) -- (3.79,-0.60);
+\134draw[blue,-&gt;] (3.60,-0.40) -- (3.79,-0.40);
+\134draw[blue,-&gt;] (3.60,-0.20) -- (3.78,-0.20);
+\134draw[blue,-&gt;] (3.60,0.00) -- (3.78,0.00);
+\134draw[blue,-&gt;] (3.60,0.20) -- (3.78,0.20);
+\134draw[blue,-&gt;] (3.60,0.40) -- (3.79,0.40);
+\134draw[blue,-&gt;] (3.60,0.60) -- (3.79,0.60);
+\134draw[blue,-&gt;] (3.60,0.80) -- (3.79,0.79);
+\134draw[blue,-&gt;] (3.60,1.00) -- (3.79,0.99);
+\134draw[blue,-&gt;] (3.60,1.20) -- (3.79,1.19);
+\134draw[blue,-&gt;] (3.60,1.40) -- (3.79,1.39);
+\134draw[blue,-&gt;] (3.60,1.60) -- (3.79,1.59);
+\134draw[blue,-&gt;] (3.60,1.80) -- (3.79,1.79);
+\134draw[blue,-&gt;] (3.60,2.00) -- (3.79,1.99);
+\134draw[blue,-&gt;] (4.00,-2.00) -- (4.19,-1.99);
+\134draw[blue,-&gt;] (4.00,-1.80) -- (4.19,-1.79);
+\134draw[blue,-&gt;] (4.00,-1.60) -- (4.19,-1.59);
+\134draw[blue,-&gt;] (4.00,-1.40) -- (4.19,-1.39);
+\134draw[blue,-&gt;] (4.00,-1.20) -- (4.19,-1.19);
+\134draw[blue,-&gt;] (4.00,-1.00) -- (4.19,-0.99);
+\134draw[blue,-&gt;] (4.00,-0.80) -- (4.19,-0.80);
+\134draw[blue,-&gt;] (4.00,-0.60) -- (4.19,-0.60);
+\134draw[blue,-&gt;] (4.00,-0.40) -- (4.19,-0.40);
+\134draw[blue,-&gt;] (4.00,-0.20) -- (4.19,-0.20);
+\134draw[blue,-&gt;] (4.00,0.00) -- (4.19,0.00);
+\134draw[blue,-&gt;] (4.00,0.20) -- (4.19,0.20);
+\134draw[blue,-&gt;] (4.00,0.40) -- (4.19,0.40);
+\134draw[blue,-&gt;] (4.00,0.60) -- (4.19,0.60);
+\134draw[blue,-&gt;] (4.00,0.80) -- (4.19,0.80);
+\134draw[blue,-&gt;] (4.00,1.00) -- (4.19,0.99);
+\134draw[blue,-&gt;] (4.00,1.20) -- (4.19,1.19);
+\134draw[blue,-&gt;] (4.00,1.40) -- (4.19,1.39);
+\134draw[blue,-&gt;] (4.00,1.60) -- (4.19,1.59);
+\134draw[blue,-&gt;] (4.00,1.80) -- (4.19,1.79);
+\134draw[blue,-&gt;] (4.00,2.00) -- (4.19,1.99);</Font></Text-field>
+</Output>
+</Group>
+<Group labelreference="L6" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Worksheet>
