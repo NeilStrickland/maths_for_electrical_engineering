@@ -29,22 +29,6 @@
 \end{frame}
 
 \begin{frame}[t]
-\frametitle{The book}
- \begin{tabular}{ll}
-  \parbox[t]{5cm}{
-   This is the recommended book.\\[4ex]
-   There are copies in the Information Commons,
-   and the course web page has links to the 
-   relevant pages on Amazon.co.uk and so on.
-  } &
-  \raisebox{-5cm}{
-   \includegraphics[scale=0.5]{images/james_book.jpg}
-  }
- \end{tabular}
-\end{frame}
-
-
-\begin{frame}[t]
  \frametitle{The point of this course}
  \uncover<1->{
  Vector calculus is the mathematical language of the laws of physics.}
@@ -121,6 +105,7 @@
 \begin{frame}[t]
  \frametitle{Reminder on partial derivatives}
  \begin{itemize}
+  \ifx\HO\undefined
   \only<1>{
    \item A function like $u=x^2y+y^3z$ has three different derivatives,
     with respect to the three variables involved.
@@ -163,7 +148,9 @@
    \]
    When calculating $u_z$, we treat $\RED{z}$ as a variable and $x$ and $y$
    as constants, and we differentiate with respect to
-   $\RED{z}$.}\uncover<6->{
+   $\RED{z}$.}%
+\fi%
+  \uncover<6->{
    \item A function like $u=x^2y+y^3z$ has three different derivatives,
     with respect to the three variables involved.
    \[  u_x=\frac{\partial u}{\partial x} = 2 x y
@@ -195,6 +182,7 @@
 \begin{frame}[t]
  \frametitle{Double partial derivatives}
  Consider again $u=x^2y+y^3z$.
+ \ifx\HO\undefined
  \only<2>{\begin{align*}
     \BLACK{u_x} &\BLACK{=2xy} & \BLACK{u_y} &\BLACK{=x^2+3y^2z} & \BLACK{u_z} &\BLACK{=y^3} \\
     \WHITE{u_{xx}} &\WHITE{=2y} & \WHITE{u_{xy}} &\WHITE{=2x} & \WHITE{u_{xz}} &\WHITE{=0} \\
@@ -255,7 +243,9 @@
           {u_{yx}} &      {=2x} &       {u_{yy}} &      {=6yz} &       {u_{yz}} &      {=3y^2} \\
           {u_{zx}} &      {=0}  &       {u_{zy}} &      {=3y^2} &       {u_{zz}} &      {=0}
    \end{align*}
-}\only<12->{\begin{align*}
+  }%
+\fi%
+  \only<12->{\begin{align*}
     {u_x} &{=2xy} & {u_y} &{=x^2+3y^2z} & {u_z} &{=y^3} \\
           {u_{xx}} &      {=2y} &  \BLUE{u_{xy}} & \BLUE{=2x} &    \OLG{u_{xz}} &  \OLG{=0} \\
      \BLUE{u_{yx}} & \BLUE{=2x} &       {u_{yy}} &      {=6yz} &   \RED{u_{yz}} &  \RED{=3y^2} \\
@@ -767,6 +757,7 @@
 
 \begin{frame}[t]
  \frametitle{Geometry of partial derivatives}
+ \ifx\HO\undefined
   \only<1>{
    \begin{center}
     \includegraphics[clip,trim=5cm 5cm 5cm 5cm,scale=0.3]{images/partial.jpg}
@@ -791,7 +782,9 @@
    red line lies in that plane and is tangent to the surface.  Along
    this line $y$ varies and $x$ is held constant.  The slope is the
    partial derivative $f_y(a,b)$.
-  }\only<4>{
+  }%
+\fi%
+  \only<4>{
    \begin{center}
     \includegraphics[clip,trim=5cm 5cm 5cm 5cm,scale=0.3]{images/tangent_plane.jpg}
    \end{center}
@@ -913,7 +906,9 @@
    \end{align*}
   }
   \item<8-> At a critical point, we must have $\cos(x)\sin(y)=0$
-   and $\sin(x)\cos(y)=0$.  \only<9>{Thus one of the following holds:
+   and $\sin(x)\cos(y)=0$.
+ \ifx\HO\undefined
+   \only<9>{Thus one of the following holds:
    \[ \begin{array}{lll}
         (p):\qquad \cos(x)=\sin(x)=0 & \hspace{4em} &
         (q):\qquad \cos(x)=\cos(y)=0 \\
@@ -922,7 +917,9 @@
       \end{array}
    \]
    \WHITE{but~(p) and~(s) cannot happen, because $\sin^2+\cos^2=1$.}
-   }\only<10->{Thus one of the following holds:
+  }%
+\fi
+  \only<10->{Thus one of the following holds:
    \[ \begin{array}{lll}
         \GRAY{(p):\qquad \cos(x)=\sin(x)=0} & \hspace{4em} &
         (q):\qquad \cos(x)=\cos(y)=0 \\
@@ -991,6 +988,7 @@
 
 \begin{frame}[t]
  \frametitle{The function $\sin(x)\sin(y)$}
+ \ifx\HO\undefined
  \only<1>{
  \[ \includegraphics[clip,trim=1cm 7cm 1cm 9cm,scale=0.3]{images/sinsin_crit.jpg} \]
  }
@@ -1000,6 +998,7 @@
  \only<3>{
  \[ \includegraphics[clip,trim=1cm 7cm 1cm 9cm,scale=0.3]{images/sinsin_max.jpg} \]
  }
+ \fi
  \only<4>{
  \[ \includegraphics[clip,trim=1cm 7cm 1cm 9cm,scale=0.3]{images/sinsin_min.jpg} \]
  }
@@ -1462,6 +1461,7 @@
  intervals of length $\dl x$}\uncover<3->{, and divide the vertical interval $[c,d]$
  into small intervals of length $\dl y$.}\uncover<4->{ This divides $D$ into small
  rectangles of area $\dl A=\dl x.\dl y$.}
+ \ifx\HO\undefined
  \only<1>{\begin{center}
   \begin{tikzpicture}[scale=1.5]
    \draw[->] (-0.1,0) -- (3.1,0);
@@ -1525,7 +1525,9 @@
     \draw[dotted] (0,\y) -- (2.8,\y);
    }
   \end{tikzpicture}
- \end{center}}\only<4->{\begin{center}
+ \end{center}}%
+ \fi%
+ \only<4->{\begin{center}
   \begin{tikzpicture}[scale=1.5]
    \draw[->] (-0.1,0) -- (3.1,0);
    \draw[->] (0,-0.1) -- (0,2.1);
@@ -2385,7 +2387,6 @@
    \def\b{0.4}
    \def\c{0.3}
    \def\d{1.2}
-   \def\u{{\a-\b*\c/\d}}
    \filldraw[fill=green!20,draw=black]
      (0,0) -- (\a,\b) -- ({\a+\c},{\b+\d}) -- (\c,\d) -- (0,0);
    \fill (0,0) circle(0.03);
@@ -2395,8 +2396,7 @@
    \draw (0,0)   node[anchor=north east] {$\ss\bsm 0\\ 0\esm$};
    \draw (\a,\b) node[anchor=north west] {$\ss\bsm a\\ b\esm$};
    \draw (\c,\d) node[anchor=south east] {$\ss\bsm c\\ d\esm$};
-   \draw ({\a+\c},{\b+\d}) node[anchor=south west] {$\ss\bsm a+c\\
-    b+d\esm$};
+   \draw ({\a+\c},{\b+\d}) node[anchor=south west] {$\ss\bsm a+c\\ b+d\esm$};
    \draw ({(\a+\c)/2},{(\b+\d)/2}) node{$\ss P$};
   \end{tikzpicture}
   \hspace{5em}
@@ -2405,31 +2405,29 @@
    \def\b{0.4}
    \def\c{0.3}
    \def\d{1.2}
-   \def\u{{\a-\b*\c/\d}}
    \draw (-0.5,0) -- (2,0);
    \draw (-0.5,\d) -- (2,\d);
    \draw[<->] (-0.3,{0.03*\d}) -- (-0.3,{0.97*\d});
    \draw (-0.3,{0.5*\d}) node[anchor=east] {$\ss d$};
    \filldraw[fill=green!20,draw=black]
-    (0,0) -- (\a,\b) -- ({\c+\u},\d) -- (\c,\d) -- (0,0);
+    (0,0) -- (\a,\b) -- ({\c+\a-\b*\c/\d},\d) -- (\c,\d) -- (0,0);
    \filldraw[fill=orange!70,draw=black]
-    (0,0) -- (\u,0) -- (\a,\b) -- (0,0);
+    (0,0) -- ({\a-\b*\c/\d},0) -- (\a,\b) -- (0,0);
    \filldraw[fill=yellow!70,draw=black]
-    (\c,\d) -- ({\c+\u},\d) -- ({\a+\c},{\b+\d}) -- (\c,\d);
+    (\c,\d) -- ({\c+\a-\b*\c/\d},\d) -- ({\a+\c},{\b+\d}) -- (\c,\d);
    \uc<4->{
      \filldraw[fill=green!20,draw=black]
-      (0,0) -- (\u,0) -- (\a,\b) -- (0,0);
+      (0,0) -- ({\a-\b*\c/\d},0) -- (\a,\b) -- (0,0);
      \filldraw[fill=white,draw=black]
-      (\c,\d) -- ({\c+\u},\d) -- ({\a+\c},{\b+\d}) -- (\c,\d);
+      (\c,\d) -- ({\c+\a-\b*\c/\d},\d) -- ({\a+\c},{\b+\d}) -- (\c,\d);
    }
-   \fill (0,0) circle(0.03);
+   \fill ( 0, 0) circle(0.03);
    \fill (\a,\b) circle(0.03);
    \fill (\c,\d) circle(0.03);
-   \fill (\u,0) circle(0.03);
-
+   \fill ({\a-\b*\c/\d}, 0) circle(0.03);
    \draw (\a,\b) node[anchor=south east] {$\ss\bsm a\\ b\esm$};
    \draw (\c,\d) node[anchor=south east] {$\ss\bsm c\\ d\esm$};
-   \draw (\u,0) node[anchor=north] {$\ss\bsm u\\ 0\esm$};
+   \draw ({\a-\b*\c/\d}, 0) node[anchor=north] {$\ss\bsm u\\ 0\esm$};
   \end{tikzpicture}}
  \end{center}
  \uc<2->{Indeed, $P$ consists of the top triangle (shown in yellow)
@@ -2624,6 +2622,7 @@
 
  Let $E$ be the tetrahedron with vertices $(0,0,0)$, $(1,0,0)$,
  $(0,1,0)$ and $(0,0,1)$.  
+ \ifx\HO\undefined
  \only<1>{\begin{center}
   \begin{tikzpicture}[scale=1.5]
    \draw[->] (0,0) -- (0,1.2);
@@ -2666,7 +2665,9 @@
    \draw (0.40,-0.25) node[anchor=north east] {$\ss y=0$};
    \draw (0.90,-0.22) node[anchor=north west] {$\ss y=1-x$};
   \end{tikzpicture}
- \end{center}}\only<4->{ \begin{center}
+ \end{center}}%
+\fi%
+ \only<4->{ \begin{center}
   \begin{tikzpicture}[scale=1.5]
    \draw[->] (0,0) -- (0,1.2);
    \draw[->] (0,0) -- (1.2,0);
@@ -2837,6 +2838,7 @@
       = \bbm x_r & x_\tht & x_z \\
              y_r & y_\tht & y_z \\
              z_r & z_\tht & z_z \ebm 
+\ifx\HO\undefined
       \only<3>{\color{white}
       = \bbm \cos(\tht) & -r\sin(\tht) & 0 \\
              \sin(\tht) &  r\cos(\tht) & 0 \\
@@ -2852,15 +2854,24 @@
              0          &  \LGRAY{0}           & 1 \ebm.}\only<7>{
       = \bbm \LGRAY{\cos(\tht)} & \LGRAY{-r\sin(\tht)} & 0 \\
              \sin(\tht) &  r\cos(\tht & \LGRAY{0} \\
-             0          &  0           & \LGRAY{1} \ebm.}\only<8->{
+             0          &  0           & \LGRAY{1} \ebm.}%
+\fi%
+    \only<8->{
       = \bbm \cos(\tht) & -r\sin(\tht) & 0 \\
              \sin(\tht) &  r\cos(\tht) & 0 \\
              0          &  0           & 1 \ebm.}
  \]}
  \uc<5->{{\tiny \begin{align*}
-  \det(J) &= \cos(\tht)\,\det\bbm r\cos(\tht) & 0 \\ 0 & 1 \ebm \only<5>{\dotsb}
-             \uc<6->{- (-r\sin(\tht)) \,\det\bbm \sin(\tht) & 0 \\ 0 & 1 \ebm} \only<6>{\dotsb}
-             \uc<7->{+ 0 \,\det\bbm \sin(\tht) & r\cos(\tht) \\ 0 & 0 \ebm }\only<7->{\WHITE{\dotsb}} \\
+    \det(J) &= \cos(\tht)\,\det\bbm r\cos(\tht) & 0 \\ 0 & 1 \ebm
+\ifx\HO\undefined
+    \only<5>{\dotsb}
+\fi%
+    \uc<6->{- (-r\sin(\tht)) \,\det\bbm \sin(\tht) & 0 \\ 0 & 1 \ebm}
+\ifx\HO\undefined
+    \only<6>{\dotsb}
+\fi%
+    \uc<7->{+ 0 \,\det\bbm \sin(\tht) & r\cos(\tht) \\ 0 & 0 \ebm }
+    \only<7->{\WHITE{\dotsb}} \\
           &\uc<8->{= r\cos^2(\tht) + r\sin^2(\tht)}\uc<9->{ = r.}
  \end{align*}}}
  \uc<10->{(Tidier approach: expand along the bottom row.)}\\
@@ -2871,7 +2882,6 @@
  \]
  just as we saw before by a more geometric argument.}
 \end{frame}
-
 
 \begin{frame}[t] 
  \frametitle{Centre of mass of a half-pipe} 
@@ -2920,8 +2930,10 @@
   $Z=\iiint_E z\,dV$ and $V=\iiint_E1\,dV$.}
  \end{minipage}\begin{minipage}[t]{3cm}
   \vspace{0pt}
+\ifx\HO\undefined
   \only<1>{\includegraphics[scale=0.3,clip=true,trim=13cm 5cm 13cm 6cm]{images/right_cone.jpg}}
   \only<2-3>{\includegraphics[scale=0.3,clip=true,trim=13cm 5cm 13cm 6cm]{images/right_cone_ring.jpg}}
+\fi%
   \only<4->{\includegraphics[scale=0.3,clip=true,trim=13cm 5cm 13cm 6cm]{images/right_cone.jpg}}
  \end{minipage}
  \begin{align*}
@@ -4710,18 +4722,22 @@
   potential function, or in other words a function $p(x,y,z)$ with
   $(p_x,p_y,p_z)=(y+z,z+x,x+y)$.}\uc<8->{  As we want $p_x=y+z$, we must have
   \[ p = \int y+z\,dx = xy+xz + 
+\ifx\HO\undefined
       \only<8>{\text{ constant. \WHITE{mmmmmmmmmm}}}
       \only<9>{\text{ something independent of } x.}
+\fi
       \only<10->{q(y,z). \text{\WHITE{mmmmmmmmmmmm}}}
   \]
   }
   \uc<11->{We thus have $q_x=0$}\uc<12->{, and the equation $p_y=z+x$ becomes
   $x+q_y=z+x$}\uc<13->{, or in other words $q_y=z$.}\uc<14->{  Integrating this,
   we get
-  \[ q = \int z\,dy = yz + 
-      \only<14>{ \text{ constant. \WHITE{mmmmmmmmmmmmm}}
-     }\only<15>{ \text{ something independent of } x \text{ and } y.
-     }\only<16->{ r(z). \text{\WHITE{mmmmmmmmmmmmmmmm}}}
+  \[ q = \int z\,dy = yz + %
+\ifx\HO\undefined
+   \only<14>{ \text{ constant. \WHITE{mmmmmmmmmmmmm}}}%
+   \only<15>{ \text{ something independent of } x \text{ and } y.}%
+\fi%
+   \only<16->{ r(z). \text{\WHITE{mmmmmmmmmmmmmmmm}}}
   \]}
   \uc<17->{ We now have $p=xy+xz+q=xy+xz+yz+r$}\uc<18->{, so the
   equation $p_z=x+y$ becomes $x+y+r_z=x+y$}\uc<19->{, so $r_z=0$.}
@@ -4834,6 +4850,7 @@
    \fill(2.80,1.20) circle(0.03);
    \draw(3.05,1.20) node[anchor=north] {$\ss\vi$};
    \draw(2.80,1.45) node[anchor=east] {$\ss\vj$};
+\ifx\HO\undefined
    \only<1>{
     \def\r{2}
     \def\t{25}
@@ -4864,7 +4881,9 @@
     \fill({\t}:{\r}) circle(0.03);
     \draw ({\t}:{\r+0.25}) node[anchor=north west] {$\ss\ve_r$};
     \draw ({\t}:{\r}) +({\t+90}:0.25) node[anchor=north east] {$\ss\ve_\tht$};
-   }\only<5->{
+   }%
+\fi%
+   \only<5->{
     \def\r{2.1}
     \def\t{50}
     \draw[dotted] (0,0) -- ({\t}:{\r});
@@ -6062,9 +6081,12 @@ $d\vn=(dy,-dx)=(\dot{y},-\dot{x})dt$. }
 \begin{frame}[t]
  \frametitle{Flow across a surface}
  Consider a surface $S$ in a region where there is a vector field $\vF$.
+\ifx\HO\undefined
  \only<1>{\[    \includegraphics[clip=true,trim=4cm 5cm 4cm 5cm,scale=0.4]{images/surface_flux.jpg}
  \]}\only<2>{\[ \includegraphics[clip=true,trim=4cm 5cm 4cm 5cm,scale=0.4]{images/normal_field.jpg}
- \]}\only<3->{\[ \includegraphics[clip=true,trim=4cm 5cm 4cm 5cm,scale=0.4]{images/flux_patch.jpg}
+ \]}%
+\fi%
+\only<3->{\[ \includegraphics[clip=true,trim=4cm 5cm 4cm 5cm,scale=0.4]{images/flux_patch.jpg}
  \]}We want to calculate the flow of $\vF$ across $S$.  \uc<2->{At
  each point on $S$ there is a normal vector $\vn$.}\uc<3->{ The flow
  across $S$ only involves the component of $\vF$ in the normal
@@ -6388,10 +6410,13 @@ $d\vn=(dy,-dx)=(\dot{y},-\dot{x})dt$. }
    \draw[blue,->] (3,2) -- (3.06,2.01);
    \draw[->] (-0.2,0) -- (7.2,0);
    \draw[->] (0,-0.2) -- (0,5);
+\ifx\HO\undefined
    \only<1>{
     \draw     (6,-0.2) -- (6,5);
     \draw[ultra thick,blue!50] (1,1.92) -- (1,3.41);
-   }\only<2->{
+   }%
+\fi%
+   \only<2->{
     \draw     (-0.2,1.88) -- (7.2,1.88);
     \draw     (-0.2,4.11) -- (7.2,4.11);
     \draw[ultra thick,blue!50] (0.17,2.2) -- (3.91,2.2);    
@@ -6409,11 +6434,6 @@ $d\vn=(dy,-dx)=(\dot{y},-\dot{x})dt$. }
  \]}
  \uc<7->{which is the two-dimensional divergence theorem.}
 \end{frame}
-
-\begin{frame}[t]
- \frametitle{More complicated regions}
-\end{frame}
-
 
 \begin{frame}[t]
  \frametitle{Example}
