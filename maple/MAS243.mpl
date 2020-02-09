@@ -1,11 +1,21 @@
 cd := currentdir():
-libname:="D:/Program Files/JavaViewLib",libname:
 with(plots):
 with(plottools):
 with(LinearAlgebra):
-with(JavaViewLib):
 _EnvAllSolutions := true:
 _EnvExplicit := true:
+
+try 
+ libname:="D:/Program Files (x86)/JavaViewLib",libname:
+ with(JavaViewLib):
+catch:
+end try;
+
+#course_dir := cat(getenv("HOME"),"/Teach/MAS243 Electrical");
+#web_dir := cat("D:/wamp/www/pm1nps/courses/MAS243");
+
+course_dir := "":
+web_dir := "":
 
 axes_box := proc(x,y,z)
  local x0,x1,y0,y1,z0,z1;
@@ -67,8 +77,11 @@ end:
 
 save_pdf := proc(s) 
  local P,old_dir,cmd,ret;
+
+ if (course_dir = "") then return; fi;
+
  P := eval(convert(s,name));
- old_dir := currentdir("U:/Teach/MAS243/notes/images/");
+ old_dir := currentdir(cat(course_dir,"/notes/images/"));
  plotsetup(ps,
   plotoutput=cat(s,".eps"),
   plotoptions=
@@ -85,15 +98,18 @@ end:
 
 save_jpg := proc(s,w_,h_,dest_) 
  local P,old_dir,w,h;
+
+ if (course_dir = "") then return; fi;
+
  P := eval(convert(s,name));
  w := `if`(nargs>1,w_,1000);
  h := `if`(nargs>2,h_,500);
  if nargs>3 and dest_ = "lectures" then 
-  old_dir := currentdir("U:/Teach/MAS243/lectures/images/");
+  old_dir := currentdir(cat(course_dir,"/lectures/images/"));
  elif nargs>3 and dest_ = "probs" then 
-  old_dir := currentdir("U:/Teach/MAS243/probs/images/");
+  old_dir := currentdir(cat(course_dir,"/probs/images/"));
  else 
-  old_dir := currentdir("U:/Teach/MAS243/notes/images/");
+  old_dir := currentdir(cat(course_dir,"/notes/images/"));
  fi;
  plotsetup(jpeg,
   plotoutput=cat(s,".jpg"),
@@ -106,20 +122,26 @@ end:
 
 save_mpl := proc(s) 
  local P,f;
+
+ if (web_dir = "") then return; fi;
+
  P := eval(convert(s,name));
- f := cat("C:/www/webroot/pm1nps/courses/MAS243/pics/",s,".mpl");
+ f := cat(web_dir,"/pics/",s,".mpl");
  exportMPL(P,f);
  NULL;
 end: 
 
 save_jvx := proc(s) 
  local P,f;
+
+ if (web_dir = "") then return; fi;
+ if not (type(exportJVX,procedure)) then return; fi;
+ 
  P := eval(convert(s,name));
- f := cat("C:/www/webroot/pm1nps/courses/MAS243/pics/",s,".jvx");
+ f := cat(web_dir,"/pics/",s,".jvx");
  exportJVX(P,f);
  NULL;
 end: 
-
 
 proj_setup := proc(t,p)
  global a,b;
@@ -129,9 +151,11 @@ proj_setup := proc(t,p)
  a := evalf([-cos(phi)*sin(theta),cos(phi)*cos(theta),sin(phi)]):
  b := evalf([cos(theta),sin(theta),0]):
 end:
+
 proj_setup(190,103):
-vproj := 
-(v) -> [v[1]*b[1]+v[2]*b[2]+v[3]*b[3],v[1]*a[1]+v[2]*a[2]+v[3]*a[3]]:
+
+vproj := (v) -> [v[1]*b[1]+v[2]*b[2]+v[3]*b[3],v[1]*a[1]+v[2]*a[2]+v[3]*a[3]]:
+
 cproj := proc()
  local L,a;
  L := NULL:
@@ -140,12 +164,17 @@ cproj := proc()
    L := L,map(vproj,a);
   elif type(a,hfarray) then
    L := L,hfarray(map(vproj,convert(a,listlist)));
+  elif type(a,Matrix) then
+   L := L,Matrix(map(vproj,convert(a,listlist)));
+  elif type(a,Array) then
+   L := L,Array(map(vproj,convert(a,listlist)));
   else 
    L := L,a;
   fi;
  od:
  CURVES(L);
 end:
+
 pproj := proc()
  local L,a;
  L := NULL:
@@ -154,34 +183,43 @@ pproj := proc()
    L := L,map(vproj,a);
   elif type(a,hfarray) then
    L := L,hfarray(map(vproj,convert(a,listlist)));
+  elif type(a,Matrix) then
+   L := L,Matrix(map(vproj,convert(a,listlist)));
+  elif type(a,Array) then
+   L := L,Array(map(vproj,convert(a,listlist)));
   else
    L := L,a;
   fi;
  od:
  POLYGONS(L);
 end:
+
 tproj := (v,s) -> TEXT(vproj(v),s):
 zproj := () -> NULL:
 proj := (u) -> eval(subs({PLOT3D=PLOT,CURVES=cproj,POLYGONS=pproj,TEXT=tproj,
                           VIEW=zproj,ORIENTATION=zproj},u)):
 
 tikz := proc(u)
- local j,s,t,v,w;
+ local j,s,t,v,ww,w;
  s := "\\begin{tikzpicture}\n";
  for v in u do
   if op(0,v) = CURVES then
+   ww := op(1,v);
+   if (type(ww,Matrix) or type(ww,Array)) then ww := convert(ww,listlist); fi;
    j := "";
    s := cat(s," \\draw ");
-   for w in op(1,v) do
+   for w in ww do
     t := sprintf("(%.3f,%.3f)",w[1],w[2]);
     s := cat(s,j,t);
     j := " -- ";
    od;
    s := cat(s,";\n");
   elif op(0,v) = POLYGONS then
+   ww := op(1,v);
+   if (type(ww,Matrix) or type(ww,Array)) then ww := convert(ww,listlist); fi;
    j := "";
    s := cat(s," \\fill ");
-   for w in op(1,v) do
+   for w in ww do
     t := sprintf("(%.3f,%.3f)",w[1],w[2]);
     s := cat(s,j,t);
     j := " -- ";
