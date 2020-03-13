@@ -1,0 +1,3 @@
+[submodule "demos/owl"]
+	path = demos/owl
+	url = https://github.com/NeilStrickland/owl.git
