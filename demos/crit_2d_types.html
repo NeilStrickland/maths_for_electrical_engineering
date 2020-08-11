@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Partial derivatives</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"> 
+   MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"]]}
+   });
+  </script> 
+  <script type="text/javascript" src="require.js"></script>
+  <style>
+   @import url(owl/owl.css);
+
+   html, body {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: white
+   }
+   
+   canvas {
+       touch-action: none;
+   }
+
+   td.mode {
+       width: 300px;
+       background: #FFFFFF;
+   }
+
+   td.mode:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }
+
+   td.mode_selected {
+       width: 300px;
+       background: #88FFFF;
+   }
+
+   td.mode_selected:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }   
+  </style>
+ </head>
+ <body>
+  <div style="text-align:center">
+   <div id="control_div" style="position:absolute; left:50px; top:50px;">
+    <div class="control" style="width: 150px;" id="index" onclick="location='index.html'">Index</div>
+   </div>
+   <h1>Types of critical points of functions of two variables</h1>
+   <br/><br/>
+   <div style="display : flex">
+    <div>
+     <canvas id="max_canvas" width="300" height="300"></canvas>
+     <br/>
+     Local maximum
+    </div>
+    <div>
+     <canvas id="min_canvas" width="300" height="300"></canvas>
+     <br/>
+     Local minimum
+    </div>
+    <div>
+     <canvas id="saddle_canvas" width="300" height="300"></canvas>
+     <br/>
+     Saddle
+    </div>
+   </div>
+  </div> 
+  <script>
+
+   requirejs.config({
+    baseUrl: '.',
+    paths: {
+     "babylonjs" : 'https://preview.babylonjs.com/babylon',
+     "babylonjs-gui" : 'https://preview.babylonjs.com/gui/babylon.gui.min',
+     "owl" : 'owl/owl',
+     "vec" : 'owl/vec'
+    }
+   });
+   
+   require(['babylonjs','owl','vec'],
+	  function(BABYLON,owl,vec) {
+   var demo = Object.create(owl.demo);
+
+   demo.init = function() {
+    var me = this;
+
+    this.types = [];
+    
+    for (t of ['max','min','saddle']) {
+     var T = {};
+     this.types.push(T);
+     
+     T.name = t;
+     T.canvas = document.getElementById(t + '_canvas');
+     T.owl3 = Object.create(owl.three_d);
+     T.engine = new BABYLON.Engine(T.canvas, true, { preserveDrawingBuffer: true, stencil: true });
+     T.scene = T.owl3.basic_scene(T.engine,T.canvas);
+     T.owl3.transform = function(u) {
+      return [u[0],2*u[2] - 2,u[1]];
+     }
+     T.owl3.make_line([-2, 0, 0],[ 2, 0, 0],[0,0,0]);
+     T.owl3.make_line([ 0,-2, 0],[ 0, 2, 0],[0,0,0]);
+     T.owl3.make_line([ 0, 0, 0],[ 0, 0, 2.2],[0,0,0]);
+
+     T.surface = Object.create(T.owl3.surface);
+     T.surface.owner = T.owl3;
+     T.surface.t0 = -2;
+     T.surface.t1 =  2;
+     T.surface.u0 = -2;
+     T.surface.u1 =  2;
+
+     T.surface.uv0 = function(t,u) { return [t/2,u/2]; }
+     
+     if (t == 'max') {
+      T.surface.embedding = function(t,u) { return [t,u,2 - (t * t + u * u)/4]; }
+      T.surface.normal    = function(t,u) { return vec.hat([ t/2, u/2,1]); }
+     } else if (t == 'min') {
+      T.surface.embedding = function(t,u) { return [t,u,(t * t + u * u)/4]; }
+      T.surface.normal    = function(t,u) { return vec.hat([-t/2,-u/2,1]); }
+     } else {
+      T.surface.embedding = function(t,u) { return [t,u,(t * u + 4)/4]; }
+      T.surface.normal    = function(t,u) { return vec.hat([-u/2,-t/2,1]); }
+     }
+
+     T.surface.make_mesh();
+     T.surface.mesh.material.diffuseTexture =
+      new BABYLON.Texture('owl/colours.png',T.scene);
+
+     T.base = T.owl3.make_polygon(
+     [[-2,-2, 0],[-2, 2,0],[ 2, 2, 0],[ 2,-2, 0]],
+     [0.3,0.6,0.3]
+     );
+
+     T.base.mesh.material.alpha = 0.4;
+
+     T.point = T.owl3.make_point(T.surface.embedding(0,0),[1,0,0],0.2);
+
+     T.x_curve = Object.create(T.owl3.curve);
+     T.x_curve.owner = T.owl3;
+     T.x_curve.t0 = -2;
+     T.x_curve.t1 =  2;
+     T.x_curve.embedding = function(t) { return T.surface.embedding(t,0); }
+     T.x_curve.colour = T.owl3.col4([1,0,1]);
+     T.x_curve.make_mesh();
+     
+     T.y_curve = Object.create(T.owl3.curve);
+     T.y_curve.owner = T.owl3;
+     T.y_curve.t0 = -2;
+     T.y_curve.t1 =  2;
+     T.y_curve.embedding = function(t) { return T.surface.embedding(0,t); }
+     T.y_curve.colour = T.owl3.col4([0,1,1]);
+     T.y_curve.make_mesh();
+     
+     this.set_callbacks(T);
+    }    
+   }
+
+   demo.set_callbacks = function(T) {
+    T.engine.runRenderLoop(function () {
+     if (T.scene) {
+      T.scene.render();
+     }
+    });
+
+    window.addEventListener("resize", function () {
+     T.engine.resize();
+    });    
+   }
+
+   demo.init();
+	  });
+  </script>
+ </body>
+</html>
