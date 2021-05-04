@@ -437,6 +437,22 @@
       x.source_plane.normalize();
       x.label_plane.setDirection(x.source_plane.normal.scale(-1));     
      }
+
+     var bx = (m == 'dfdx' ) ? 1 : 0;
+     var by = (m == 'dfdy' ) ? 1 : 0;
+     var bp = (m == 'plane') ? 1 : 0;
+
+     this.x_plane.set_enabled(by);
+     this.x_plane_base.set_enabled(by);
+     this.x_curve.set_enabled(by);
+     this.x_tangent_line.set_enabled(by || bp);
+
+     this.y_plane.set_enabled(bx);
+     this.y_plane_base.set_enabled(bx);
+     this.y_curve.set_enabled(bx);
+     this.y_tangent_line.set_enabled(bx || bp);
+
+     this.tangent_plane.set_enabled(bp);
     }
 
     demo.set_mode = function(m) {
