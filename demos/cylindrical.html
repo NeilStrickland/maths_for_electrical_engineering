@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cylindrical coords</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"> 
+   MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"]]}
+   });
+  </script> 
+  <script type="text/javascript" src="require.js"></script>
+  <style>
+   @import url(owl/owl.css);
+
+   html, body {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: white
+   }
+   
+   canvas {
+       touch-action: none;
+   }
+
+   td.mode {
+       width: 300px;
+       background: #FFFFFF;
+   }
+
+   td.mode:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }
+
+   td.mode_selected {
+       width: 300px;
+       background: #88FFFF;
+   }
+
+   td.mode_selected:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }   
+  </style>
+ </head>
+ <body>
+  <div style="text-align:center">
+   <div id="control_div" style="position:absolute; left:50px; top:50px;">
+    <div class="control" style="width: 150px;" id="index" onclick="location='index.html'">Index</div>
+   </div>
+   <h1>Cylindrical polar coordinates</h1>
+   <br/><br/>
+   <div style="display : flex">
+    <canvas id="main_canvas" width="600" height="600"></canvas>
+    <div style="display:flex;justify-content:center;align-items:center;width:600px;height:600px;">
+     <div style="display: inline-block">
+      <table class="edged">
+      </table>
+      <br/>
+      <table>
+       <tr>
+	<td style="width:320px">
+	 <div id="slidecontainer_r" style="width: 300px; margin: 0 auto;">
+	  <input type="range" min="0" max="200" value="100" class="slider" id="slider_r">
+	 </div>
+	</td>
+       </tr>
+       <tr>
+	<td style="width:320px">
+	 <div id="slidecontainer_t" style="width: 300px; margin: 0 auto;">
+	  <input type="range" min="-100" max="100" value="0" class="slider" id="slider_t">
+	 </div>
+	</td>
+       </tr>      
+       <tr>
+	<td style="width:320px">
+	 <div id="slidecontainer_z" style="width: 300px; margin: 0 auto;">
+	  <input type="range" min="-100" max="100" value="0" class="slider" id="slider_z">
+	 </div>
+	</td>
+       </tr>      
+      </table>
+      <br/>
+      <table class="edged">
+       <tr>
+	<td style="text-align: right" width="60">$r=$</td>
+	<td style="text-align: left"  width="60" id="display_r">1.0</td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$\theta=$</td>
+	<td style="text-align: left"  width="60" id="display_t">0.0</td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$z=$</td>
+	<td style="text-align: left"  width="60" id="display_z">0.0</td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+   <br/><br/>
+   <div id="text" style="width: 800px; margin: 0 auto; text-align:left">
+   </div>
+  </div> 
+  <script>
+
+   requirejs.config({
+    baseUrl: '.',
+    paths: {
+     "babylonjs" : 'https://preview.babylonjs.com/babylon',
+     "babylonjs-gui" : 'https://preview.babylonjs.com/gui/babylon.gui.min',
+     "owl" : 'owl/owl',
+     "vec" : 'owl/vec'
+    }
+   });
+   
+   require(['babylonjs','owl','vec'],
+	  function(BABYLON,owl,vec) {
+   var demo = Object.create(owl.demo);
+
+   demo.init = function() {
+    var me = this;
+
+    this.find_ids(['slider_r','slider_t','slider_z',
+		   'display_r','display_t','display_z']);
+    
+    for (k of ['r','t','z']) {
+     this['display_' + k].style['font-family'] = owl.math_font;
+     this['display_' + k].style['font-size']   = '18px';
+    }
+    
+    this.owl3 = Object.create(owl.three_d);
+    this.owl3.transform = function(u) { return [2*(u[0] - 1), 2*(u[2]/3 - 1), 2*(u[1] - 1)]; }
+    
+    this.h = function(x,y) { return (x * x + 1.2 * (y - 0.8) * (y - 0.8))/1.3 + 1; }
+    this.hx = function(x,y) { return (this.h(x + 0.0001,y) - this.h(x,y)) / 0.0001; }
+    this.hy = function(x,y) { return (this.h(x,y + 0.0001) - this.h(x,y)) / 0.0001; }
+    
+    this.canvas = document.getElementById("main_canvas");
+    this.engine =
+     new BABYLON.Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: true });
+    
+    this.scene = this.owl3.basic_scene(this.engine,this.canvas);
+    this.scene.camera.radius = 10;
+    this.scene.camera.alpha  = 1;
+
+    this.base = this.owl3.make_polygon(
+     [[0,0,0],[2,0,0],[2,2,0],[0,2,0]],
+     [0.3,0.3,0.3],this.scene
+    );
+    
+    this.surface = Object.create(this.owl3.surface);
+    this.surface.owner = this.owl3;
+    
+    this.surface.embedding = function(t,u) {
+     var x = 2 * t;
+     var y = 2 * u;
+     var z = me.h(x,y);
+     return [x,y,z];
+    }
+    
+    this.surface.make_mesh();
+
+    var L = [
+     [[0,0,0],[2.2,0,0]],
+     [[0,0,0],[0,2.2,0]],
+     [[0,0,0],[0,0,6.6]],
+     [[0,2,6],[2,2,6]],
+     [[2,0,6],[2,2,6]],
+     [[2,2,0],[2,2,6]],
+     [[2,0,0],[2,2,0]],
+     [[2,0,0],[2,0,6]],
+     [[0,2,0],[2,2,0]],
+     [[0,2,0],[0,2,6]],
+     [[0,0,6],[2,0,6]],
+     [[0,0,6],[0,2,6]],
+     [[2.2,0,0],[2.1,0.04,0]],
+     [[2.2,0,0],[2.1,-0.04,0]],
+     [[0,2.2,0],[ 0.04,2.1,0]],
+     [[0,2.2,0],[-0.04,2.1,0]],
+     [[0,0,6.6],[ 0.04,0,6.3]],
+     [[0,0,6.6],[-0.04,0,6.3]]
+    ];
+
+    for (u of L) { this.owl3.make_thin_line(u[0],u[1],[0,0,1]); }
+
+    this.labels = [];
+    
+    this.labels.push(this.owl3.make_label([2.3,0.0,0.0],'x'));
+    this.labels.push(this.owl3.make_label([0.0,2.3,0.0],'y'));
+    this.labels.push(this.owl3.make_label([0.0,0.0,6.9],'z'));
+
+    this.a = 1;
+    this.b = 1;
+    this.c = this.h(this.a,this.b);
+    this.m = this.hx(this.a,this.b);
+    this.n = this.hy(this.a,this.b);
+
+    this.ft = function(x,y) {
+     return me.c + (x - me.a) * me.m + (y - me.b) * me.n;
+    }
+
+    this.fft = function(x,y) {
+     return [x,y,this.ft(x,y)];
+    }
+    
+    this.stalk = this.owl3.make_thin_line([this.a,this.b,0],
+					  [this.a,this.b,this.c],
+					  [0,0,0], this.scene);
+
+    this.stalk_bot = this.owl3.make_point([this.a,this.b,0],[1,0,0],0.07);
+    this.stalk_top = this.owl3.make_point([this.a,this.b,this.c],[1,0,0],0.07);
+
+    //////////////////////////////////////////////////
+
+    this.x_plane = this.owl3.make_polygon(
+     [[this.a,0,0],[this.a,2,0],[this.a,2,6],[this.a,0,6]],
+     [0.56,0.93,0.56]
+    );
+
+    this.x_plane.mesh.material.alpha = 0.5;
+
+    this.x_plane_base = this.owl3.make_thin_line(
+     [this.a,0,0],[this.a,2,0],[0.4,1,0.4]
+    );
+
+    this.x_curve = Object.create(this.owl3.curve);
+    this.x_curve.owner = this.owl3;
+    this.x_curve.colour = owl3.col4([0.56,0.93,0.56]);
+    this.x_curve.a = this.a;
+    this.x_curve.embedding = function(t) {
+     var x = this.a;
+     var y = 2 * t;
+     var z = me.h(x,y);
+     return [x,y,z];
+    };
+    this.x_curve.make_mesh();
+
+    this.x_tangent_line = this.owl3.make_thin_line(
+     this.fft(this.a,0),this.fft(this.a,2),[0,1,0]
+    );
+
+    //////////////////////////////////////////////////
+
+    this.y_plane = this.owl3.make_polygon(
+     [[0,this.b,0],[2,this.b,0],[2,this.b,6],[0,this.b,6]],
+     [0.93,0.56,0.56]
+    );
+
+    this.y_plane.mesh.material.alpha = 0.5;
+
+    this.y_plane_base = this.owl3.make_thin_line(
+     [0,this.b,0],[2,this.b,0],[1.0,0.4,0.4]
+    );
+
+    this.y_curve = Object.create(this.owl3.curve);
+    this.y_curve.owner = this.owl3;
+    this.y_curve.colour = owl3.col4([0.93,0.56,0.56]);
+    this.y_curve.b = this.b;
+    this.y_curve.embedding = function(t) {
+     var x = 2 * t;
+     var y = this.b;
+     var z = me.h(x,y);
+     return [x,y,z];
+    };
+    this.y_curve.make_mesh();
+
+    this.y_tangent_line = this.owl3.make_thin_line(
+     this.fft(0,this.b),this.fft(2,this.b),[1,0,0]
+    );
+    
+    //////////////////////////////////////////////////
+
+    this.tangent_plane = this.owl3.make_polygon(
+     [this.fft(this.a - 0.2,this.b - 0.2),
+      this.fft(this.a + 0.2,this.b - 0.2),
+      this.fft(this.a + 0.2,this.b + 0.2),
+      this.fft(this.a - 0.2, this.b + 0.2)],
+     [0.8,0.5,0.8]
+    );
+
+    //////////////////////////////////////////////////
+
+    this.slider_r.oninput = function() {
+     me.set_rtz(parseInt(this.value) * 0.01,me.t,me.z);
+    }
+    
+    this.slider_t.oninput = function() {
+     me.set_ab(me.r,parseInt(this.value) * 0.01,me.z);
+    }
+
+    this.slider_z.oninput = function() {
+     me.set_ab(me.r,me.t,parseInt(this.value) * 0.01);
+    }
+
+    //////////////////////////////////////////////////
+    
+    this.modes = [];
+
+    for (var m of ['clear','dfdx','dfdy','plane']) {
+     var x = {};
+     this.modes.push(x);
+     x.name = m;
+     x.button = document.getElementById('mode_' + m);
+     x.msg = document.getElementById('msg_' + m);
+    }
+
+    for (x of this.modes) {
+     this.set_button_handler(x);
+    }
+    
+    //////////////////////////////////////////////////
+
+    this.set_mode('clear');
+    this.set_ab(1,1);
+    
+    //////////////////////////////////////////////////
+
+    this.engine.runRenderLoop(function () {
+     if (me.scene) {
+      me.orient_labels();
+      me.scene.render();
+     }
+    });
+
+    window.addEventListener("resize", function () {
+     me.engine.resize();
+    });
+   }
+
+   demo.set_button_handler = function(x) {
+    var me = this;
+
+    x.button.onclick = function() {
+     me.set_mode(x.name);
+    }
+   }
+
+   demo.set_ab = function(a,b) {
+    this.a = a;
+    this.b = b;
+    this.c = this.h(this.a,this.b);
+    this.m = this.hx(this.a,this.b);
+    this.n = this.hy(this.a,this.b);
+
+    this.stalk.a = [this.a,this.b,0];
+    this.stalk.b = [this.a,this.b,this.c];
+    this.stalk.make_mesh();
+
+    this.stalk_bot.set_position([this.a,this.b,0]);
+    this.stalk_top.set_position([this.a,this.b,this.c]);
+
+    this.x_plane.v = [[this.a,0,0],[this.a,2,0],[this.a,2,6],[this.a,0,6]];
+    this.x_plane.make_mesh();
+
+    this.y_plane.v = [[0,this.b,0],[2,this.b,0],[2,this.b,6],[0,this.b,6]];
+    this.y_plane.make_mesh();
+
+    this.x_plane_base.a = [this.a,0,0];
+    this.x_plane_base.b = [this.a,2,0];
+    this.x_plane_base.make_mesh();
+
+    this.y_plane_base.a = [0,this.b,0];
+    this.y_plane_base.b = [2,this.b,0];
+    this.y_plane_base.make_mesh();
+
+    this.x_curve.a = this.a;
+    this.y_curve.b = this.b;
+
+    this.x_curve.make_mesh();
+    this.y_curve.make_mesh();
+
+    this.x_tangent_line.a = this.fft(this.a,0);
+    this.x_tangent_line.b = this.fft(this.a,2);
+
+    this.y_tangent_line.a = this.fft(0,this.b);
+    this.y_tangent_line.b = this.fft(2,this.b);
+
+    this.x_tangent_line.make_mesh();
+    this.y_tangent_line.make_mesh();
+
+    this.tangent_plane.v = 
+     [this.fft(this.a - 0.2,this.b - 0.2),
+      this.fft(this.a + 0.2,this.b - 0.2),
+      this.fft(this.a + 0.2,this.b + 0.2),
+      this.fft(this.a - 0.2, this.b + 0.2)];
+
+    this.tangent_plane.make_mesh();
+
+    this.display_a.innerHTML = this.a.toFixed(2);
+    this.display_b.innerHTML = this.b.toFixed(2);
+    this.display_f.innerHTML = this.c.toFixed(2);
+    this.display_fx.innerHTML = this.m.toFixed(2);
+    this.display_fy.innerHTML = this.n.toFixed(2);
+   }
+
+   demo.orient_labels = function() {
+    for (x of this.labels) {
+     var n = x.label_plane.position.subtract(this.scene.camera.position);
+     x.source_plane = new BABYLON.Plane(-n.x,-n.y,-n.z,0);
+     x.source_plane.normalize();
+     x.label_plane.setDirection(x.source_plane.normal.scale(-1));     
+    }
+   }
+
+   demo.set_mode = function(m) {
+    for (y of this.modes) {
+     if (y.name == m) {
+      y.button.className = 'mode_selected';
+      y.msg.style.display = 'block';
+     } else {
+      y.button.className = 'mode';
+      y.msg.style.display = 'none';
+     }
+    }
+
+    var bx = (m == 'dfdx' ) ? 1 : 0;
+    var by = (m == 'dfdy' ) ? 1 : 0;
+    var bp = (m == 'plane') ? 1 : 0;
+    
+    this.x_plane.set_enabled(by);
+    this.x_plane_base.set_enabled(by);
+    this.x_curve.set_enabled(by);
+    this.x_tangent_line.set_enabled(by || bp);
+
+    this.y_plane.set_enabled(bx);
+    this.y_plane_base.set_enabled(bx);
+    this.y_curve.set_enabled(bx);
+    this.y_tangent_line.set_enabled(bx || bp);
+
+    this.tangent_plane.set_enabled(bp);
+   }
+   
+
+   demo.init();
+	  });
+  </script>
+ </body>
+</html>
