@@ -59,4 +59,6 @@ define(function() {
   vv = vv.map(x => x[1]);
   return vv;
  };
+
+ return vec;
 });
