@@ -1,0 +1,95 @@
+curves.mw
+ <ul>
+  <li>Helix, cycloid, projectile</li>
+ </ul>
+
+cylinder_flow.mw
+ <ul>
+  <li>Generate tikz code for flow around a cylinder</li>
+ </ul>
+
+deltaA.mw
+ <ul>
+  <li></li>
+ </ul>
+
+geometry_of_partial_derivatives.mw
+ <ul>
+  <li>Generate jpg image for geometry of partial derivatives</li>
+ </ul>
+
+lagrange_multipliers.mw
+ <ul>
+  <li>Pictures related to Lagrange multipliers</li>
+ </ul>
+
+MAS243a.mw
+ <ul>
+  <li>Experiments with Maple user interface elements</li>
+ </ul>
+
+MAS243.mw
+ <ul>
+  <li></li>
+ </ul>
+
+one_var_crit.mw
+ <ul>
+  <li>Critical points for $x^5/5 - x^3/3$, $\pi x - \sin(\pi x)$,
+   $e^{-x}\sin(x)/(2 - \sqrt{3}))$, $x^ne^{-x}$, $(2x + 1)e^{-x^2}$,
+   $\sin(\pi x)\cos(20\pi x)$, $x(x - 1)(x - 2)(x - 3)$
+  </li>
+  <li>Critical points of gain functions for Butterworth and Chebyshev filters</li>
+ </ul>
+
+optimisation_in_one_variable.mw
+ <ul>
+  <li>Critical points for $x^5/5 - x^3/3$, $\pi x - \sin(\pi x)$,
+   $e^{-x}\sin(x)/(2 - \sqrt{3}))$, $x^ne^{-x}$, $(2x + 1)e^{-x^2}$,
+   $\sin(\pi x)\cos(20\pi x)$, $x(x - 1)(x - 2)(x - 3)$
+  </li>
+  <li>Critical points of gain functions for Butterworth and Chebyshev filters
+  </li>
+ </ul>
+
+optimisation_in_three_variables.mw
+ <ul>
+  <li>The function $8x^2 + 8y^2 + 8z^2 - (z + 1)^3$</li>
+  <li>The function $\exp(-x^2 - y^2 - z^2)(\exp(-x) + \exp(-y) + \exp(-z))$</li>
+  <li>A Symmetric function: $xy+xz+yz-2xyz-x-y-z-x^2-y^2-z^2+x^3+y^3+z^3$</li>
+  <li>A special polynomial: $x^3-27x+2(3x+y+z)(y^2+z^2-yz)-3yz(y+z)$</li>
+ </ul>
+
+optimisation_in_two_variables.mw
+ <ul>
+  <li>Functions with a single critical point</li>
+  <li>The function $4\cos(x)\cos(y)\exp(-x^2/3-y^2/3)$</li>
+  <li>The function $x^3 + y^3 + 3xy$</li>
+  <li>The function $3x^2 + 3y^2 + 2xy(x + y)$</li>
+  <li>The function $\sin(x)\sin(y)$</li>
+  <li>The function $\exp(-x^2 - y^2 - 2x)$</li>
+  <li>The function $1/(1 + (x - 5)^2) + 1/(1 + (y - 10)^2)$</li>
+ </ul>
+
+pde.mw
+ Some interesting PDEs and sample solutions:
+ <ul>
+  <li>Biharmonic (small elastic deformations)</li>
+  <li>Boussinesq (waves in shallow harbours)</li>
+  <li>Helmholtz (arises from wave equation by separation of variables)</li>
+  <li>Klein-Gordon (relativistic spin zero particles eg pions)</li>
+  <li>Tricomi (fluid flow close to the speed of sound)</li>
+  <li>KdV (waves in a shallow channel)</li>
+  <li>Heat</li>
+  <li>Wave</li>
+ </ul>
+
+polar_coordinates.mw
+ <ul>
+  <li>Various visualisations of cylindrical and spherical polar coordinates</li>
+ </ul>
+
+surfaces.mw
+ <ul>
+  <li>Plots of hemispheres, cylinders, cones, various other surfaces for integration problems</li>
+ </ul>

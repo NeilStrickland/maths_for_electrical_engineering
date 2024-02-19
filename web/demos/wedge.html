@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wedge</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"> 
+   MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"]]}
+   });
+  </script> 
+  <script type="text/javascript" src="require.js"></script>
+  <style>
+   @import url(owl/owl.css);
+
+   html, body {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: white
+   }
+   
+   canvas {
+       touch-action: none;
+   }
+
+  </style>
+ </head>
+ <body>
+  <div style="text-align:center">
+   <div id="control_div" style="position:absolute; left:50px; top:50px;">
+    <div class="control" style="width: 150px;" id="index" onclick="location='index.html'">Index</div>
+   </div>
+   <h1>A 3D wedge</h1>
+   <br/><br/>
+   <canvas id="main_canvas" width="600" height="400"></canvas>
+  </div> 
+  <script>
+   
+   requirejs.config({
+    baseUrl: '.',
+    paths: {
+     "babylonjs" : 'https://preview.babylonjs.com/babylon',
+     "babylonjs-gui" : 'https://preview.babylonjs.com/gui/babylon.gui.min',
+     "owl" : 'owl/owl',
+     "vec" : 'owl/vec'
+    }
+   });
+   
+   require(['babylonjs','babylonjs-gui','owl','vec'],
+	   function(BABYLON,BABYLON_GUI,owl,vec) {
+	    BABYLON.GUI = BABYLON_GUI;
+   var demo = Object.create(owl.demo);
+
+   demo.init = function() {
+    var me = this;
+
+    this.find_ids();
+    
+    this.owl3 = Object.create(owl.three_d);
+    this.owl3.transform = function(u) { return [(u[0]-1)/2, u[2]/2, (u[1]-0.5)/2]; }
+
+    this.canvas = document.getElementById("main_canvas");
+    this.engine =
+     new BABYLON.Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: true });
+    
+    this.scene = this.owl3.basic_scene(this.engine,this.canvas);
+    this.scene.camera.radius = 6;
+    this.scene.camera.alpha = 2;
+    this.scene.camera.beta = 0.8;
+    
+    this.faces = [];
+
+    this.faces.push(
+     this.owl3.make_polygon(
+      [[0,0,0],[4,0,0],[4,0,2]],owl.standard_colour(0)));
+    
+    this.faces.push(
+     this.owl3.make_polygon(
+      [[0,2,0],[4,2,0],[4,2,2]],owl.standard_colour(1)));
+    
+    this.faces.push(
+     this.owl3.make_polygon(
+      [[0,0,0],[4,0,0],[4,2,0],[0,2,0]],owl.standard_colour(2)));
+    
+    this.faces.push(
+     this.owl3.make_polygon(
+      [[0,0,0],[4,0,2],[4,2,2],[0,2,0]],owl.standard_colour(3)));
+    
+    this.faces.push(
+     this.owl3.make_polygon(
+      [[4,0,0],[4,2,0],[4,2,2],[4,0,2]],owl.standard_colour(4)));
+    
+    this.axes = this.owl3.make_axes_cross({x0 : -0.4,y0 : -0.4, z0 : -0.4,
+					   x1 : 4.4, y1 : 2.4, z1 : 2.4});
+
+    this.labels = [];
+    this.labels.push(this.owl3.make_label([4.6,0.0,0.0],'x'));
+    this.labels.push(this.owl3.make_label([0.0,2.6,0.0],'y'));
+    this.labels.push(this.owl3.make_label([0.0,0.0,2.6],'z'));
+
+    //////////////////////////////////////////////////
+
+    this.engine.runRenderLoop(function () {
+     if (me.scene) {
+      me.orient_labels();
+      me.scene.render();
+     }
+    });
+
+    window.addEventListener("resize", function () {
+     me.engine.resize();
+    });
+   }
+
+   demo.orient_labels = function() {
+    for (x of this.labels) {
+     var n = x.label_plane.position.subtract(this.scene.camera.position);
+     x.source_plane = new BABYLON.Plane(-n.x,-n.y,-n.z,0);
+     x.source_plane.normalize();
+     x.label_plane.setDirection(x.source_plane.normal.scale(-1));     
+    }
+   }
+   
+   demo.init();
+	  });
+  </script>
+ </body>
+</html>

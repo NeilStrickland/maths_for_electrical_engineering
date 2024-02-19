@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Curved region</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"> 
+   MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"]]}
+   });
+  </script> 
+  <script type="text/javascript" src="require.js"></script>
+  <style>
+   @import url(owl/owl.css);
+
+   html, body {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: white
+   }
+   
+   canvas {
+       touch-action: none;
+   }
+
+  </style>
+ </head>
+ <body>
+  <div style="text-align:center">
+   <div id="control_div" style="position:absolute; left:50px; top:50px;">
+    <div class="control" style="width: 150px;" id="index" onclick="location='index.html'">Index</div>
+   </div>
+   <h1>A curved region</h1>
+   <br/><br/>
+   <canvas id="main_canvas" width="600" height="400"></canvas>
+  </div> 
+  <script>
+   
+   requirejs.config({
+    baseUrl: '.',
+    paths: {
+     "babylonjs" : 'https://preview.babylonjs.com/babylon',
+     "babylonjs-gui" : 'https://preview.babylonjs.com/gui/babylon.gui.min',
+     "owl" : 'owl/owl',
+     "vec" : 'owl/vec'
+    }
+   });
+   
+   require(['babylonjs','owl','vec'],
+	  function(BABYLON,owl,vec) {
+   var demo = Object.create(owl.demo);
+
+   demo.init = function() {
+    var me = this;
+
+    this.find_ids();
+    
+    this.owl3 = Object.create(owl.three_d);
+    this.owl3.transform = function(u) { return [u[0] - 0.5, u[2], u[1] - 0.5]; }
+    
+    this.h = function(x,y) {
+     return 4 * x * (1 - x) * y * (1 - y);
+    }
+    this.hx = function(x,y) {
+     return 4 * (1 - 2 * x) * y * (1 - y);
+    }
+    this.hy = function(x,y) {
+     return 4 * x * (1 - x) * (1 - 2 * y);
+    }
+    this.g = function(x,y) {
+     return vec.hat([-this.hx(x,y),-this.hy(x,y),1]);
+    }
+    
+    this.canvas = document.getElementById("main_canvas");
+    this.engine =
+     new BABYLON.Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: true });
+    
+    this.scene = this.owl3.basic_scene(this.engine,this.canvas);
+    this.scene.camera.radius = 2;
+    this.scene.camera.alpha  = 0;
+
+    this.surface = Object.create(this.owl3.surface);
+    this.surface.owner = this.owl3;
+    
+    this.surface.embedding = function(t,u) {
+     return [t,u,me.h(t,u)];
+    }
+    
+    this.surface.normal = function(t,u) {
+     return me.g(t,u);
+    }
+
+    this.surface.uv0 = function(t,u) { return [t/2,u/2]; }
+
+    this.surface.make_mesh();
+
+    this.surface.mesh.material.diffuseTexture =
+     new BABYLON.Texture('owl/colours.png',this.scene);
+
+    this.base = this.owl3.make_polygon([[0,0,0],[1,0,0],[1,1,0],[0,1,0]],[0.3,0.6,0.3]);
+    
+    this.owl3.make_axes_cross({x0 : -0.1, x1 : 1.1, y0 : -0.1, y1 : 1.1, z0 : -0.1, z1 : 0.4});
+
+    this.labels = [];
+    var opts = { width : 0.05, height : 0.05, font_size : 50 };
+    
+    this.labels.push(this.owl3.make_label([1.2,0.0,0.0],'x',opts));
+    this.labels.push(this.owl3.make_label([0.0,1.2,0.0],'y',opts));
+    this.labels.push(this.owl3.make_label([0.0,0.0,0.5],'z',opts));
+
+    //////////////////////////////////////////////////
+
+    this.engine.runRenderLoop(function () {
+     if (me.scene) {
+      me.scene.render();
+     }
+    });
+
+    window.addEventListener("resize", function () {
+     me.engine.resize();
+    });
+   }
+
+   demo.init();
+	  });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Several critical points</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"> 
+   MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"]]}
+   });
+  </script> 
+  <script type="text/javascript" src="require.js"></script>
+  <style>
+   @import url(owl/owl.css);
+
+   html, body {
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       background: white
+   }
+   
+   canvas {
+       touch-action: none;
+   }
+
+   td.mode {
+       width: 300px;
+       background: #FFFFFF;
+   }
+
+   td.mode:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }
+
+   td.mode_selected {
+       width: 300px;
+       background: #88FFFF;
+   }
+
+   td.mode_selected:hover {
+       background: #DDDDDD;
+       cursor: pointer
+   }   
+  </style>
+ </head>
+ <body>
+  <div style="text-align:center">
+   <div id="control_div" style="position:absolute; left:50px; top:50px;">
+    <div class="control" style="width: 150px;" id="index" onclick="location='index.html'">Index</div>
+   </div>
+   <h1>A function with several critical points</h1>
+   <br/><br/>
+   <div style="display : flex">
+    <canvas id="main_canvas" width="600" height="400"></canvas>
+    <div style="display:flex;justify-content:center;align-items:center;width:600px;height:400px;">
+     <div style="display: inline-block">
+      <table class="edged">
+       <tr><td id="mode_clear"  class="mode_selected">Clear</td></tr>
+       <tr><td id="mode_max"    class="mode">Local maximum</td></tr>
+       <tr><td id="mode_min"    class="mode">Local minimum</td></tr>
+       <tr><td id="mode_saddle" class="mode">Saddle</td></tr>
+      </table>
+      <br/>
+      <table>
+       <tr>
+	<td style="width:320px">
+	 <div id="slidecontainer_a" style="width: 300px; margin: 0 auto;">
+	  <input type="range" min="0" max="200" value="100" class="slider" id="slider_a">
+	 </div>
+	</td>
+       </tr>
+       <tr>
+	<td style="width:320px">
+	 <div id="slidecontainer_b" style="width: 300px; margin: 0 auto;">
+	  <input type="range" min="0" max="200" value="100" class="slider" id="slider_b">
+	 </div>
+	</td>
+       </tr>      
+      </table>
+      <br/>
+      <table class="edged">
+       <tr>
+	<td style="text-align: right" width="60">$a=$</td>
+	<td style="text-align: left"  width="60" id="display_a">1.0</td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$b=$</td>
+	<td style="text-align: left"  width="60" id="display_b">1.0</td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$f(a,b)=$</td>
+	<td style="text-align: left"  width="60" id="display_f"></td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$f_x(a,b)=$</td>
+	<td style="text-align: left"  width="60" id="display_fx"></td>
+       </tr>
+       <tr>
+	<td style="text-align: right" width="60">$f_y(a,b)=$</td>
+	<td style="text-align: left"  width="60" id="display_fy"></td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+   <br/><br/>
+   <div id="text" style="width: 800px; margin: 0 auto; text-align:left">
+    <div id="msg_clear">
+     This shows the graph of a function
+     $z = f(x,y) = 4 \cos(x) \cos(y) e^{-(x^2+y^2)/3} $,
+     which has critical points of all three types.
+    </div>
+    <div id="msg_max" style="display:none">
+     There is a local maximum at $(a,b)=(0,0)$, with value $f(0,0)=4$.
+     Note that the two tangent lines are horizontal, as is the case at
+     all critical points.
+    </div>
+    <div id="msg_min" style="display:none">
+     There is a local minimum at $(a,b)\approx(2.17,0)$, with value
+     $f(a,b)\approx -0.47$. Note that the two tangent lines are
+     horizontal, as is the case at all critical points.
+    </div>
+    <div id="msg_saddle" style="display:none">
+     There is a saddle at $(a,b)\approx(-1.57,-1.57)$, with value
+     $f(a,b)=0$. Note that the two tangent lines are
+     horizontal, as is the case at all critical points.
+    </div>
+   </div>
+  </div> 
+  <script>
+
+   requirejs.config({
+    baseUrl: '.',
+    paths: {
+     "babylonjs" : 'https://preview.babylonjs.com/babylon',
+     "babylonjs-gui" : 'https://preview.babylonjs.com/gui/babylon.gui.min',
+     "owl" : 'owl/owl',
+     "vec" : 'owl/vec'
+    }
+   });
+   
+   require(['babylonjs','owl','vec'],
+	  function(BABYLON,owl,vec) {
+   var demo = Object.create(owl.demo);
+
+   demo.init = function() {
+    var me = this;
+
+    this.find_ids(['slider_a','slider_b','display_a','display_b',
+		   'display_f','display_fx','display_fy']);
+    
+    for (k of ['a','b','f','fx','fy']) {
+     this['display_' + k].style['font-family'] = owl.math_font;
+     this['display_' + k].style['font-size']   = '18px';
+    }
+    
+    this.owl3 = Object.create(owl.three_d);
+    this.owl3.transform = function(u) { return [u[0]/2, u[2]/2, u[1]/2]; }
+    
+    this.h = function(x,y) {
+     return 4 * Math.cos(x) * Math.cos(y) * Math.exp(-(x * x + y * y)/3);
+    }
+    this.hx = function(x,y) {
+     return - (4 * Math.sin(x) + 8/3 * x * Math.cos(x)) * Math.cos(y) * Math.exp(-(x * x + y * y)/3);
+    }
+    this.hy = function(x,y) {
+     return - (4 * Math.sin(y) + 8/3 * y * Math.cos(y)) * Math.cos(x) * Math.exp(-(x * x + y * y)/3);
+    }
+    this.g = function(x,y) {
+     return vec.hat([-this.hx(x,y),-this.hy(x,y),1]);
+    }
+
+    this.canvas = document.getElementById("main_canvas");
+    this.engine =
+     new BABYLON.Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: true });
+    
+    this.scene = this.owl3.basic_scene(this.engine,this.canvas);
+    this.scene.camera.radius = 6;
+    this.scene.camera.alpha  = 1;
+
+    this.surface = Object.create(this.owl3.surface);
+    this.surface.owner = this.owl3;
+    this.surface.t0 = -4;
+    this.surface.t1 =  4;
+    this.surface.u0 = -4;
+    this.surface.u1 =  4;
+    this.surface.n = 128;
+    this.surface.m = 128;
+    
+    this.surface.embedding = function(t,u) {
+     return [t,u,me.h(t,u)];
+    }
+    
+    this.surface.normal = function(t,u) {
+     return me.g(t,u);
+    }
+    
+    this.surface.uv0 = function(t,u) { return [t/2,u/2]; }
+
+    this.surface.make_mesh();
+    this.surface.mesh.material.diffuseTexture =
+     new BABYLON.Texture('owl/colours.png',this.scene);
+
+    this.owl3.make_axes_box({ x0 : -4, x1 : 4, y0 : -4, y1 : 4, z0 : -0.5, z1 : 4});
+    
+    this.a = 3;
+    this.b = 3;
+    this.c = this.h(this.a,this.b);
+    this.m = this.hx(this.a,this.b);
+    this.n = this.hy(this.a,this.b);
+
+    this.ft = function(x,y) {
+     return me.c + (x - me.a) * me.m + (y - me.b) * me.n;
+    }
+
+    this.fft = function(x,y) {
+     return [x,y,this.ft(x,y)];
+    }
+    
+    this.stalk = this.owl3.make_thin_line([this.a,this.b,0],
+					  [this.a,this.b,this.c],
+					  [0,0,0], this.scene);
+
+    this.stalk_bot = this.owl3.make_point([this.a,this.b,0],[1,0,0],0.07);
+    this.stalk_top = this.owl3.make_point([this.a,this.b,this.c],[1,0,0],0.07);
+
+    //////////////////////////////////////////////////
+
+    this.x_tangent_line = this.owl3.make_thin_line(
+     this.fft(this.a - 0.3, this.b),this.fft(this.a + 0.3, this.b),
+     [0,1,0]
+    );
+
+    this.y_tangent_line = this.owl3.make_thin_line(
+     this.fft(this.a ,this.b - 0.3),this.fft(this.a ,this.b + 0.3),
+     [1,0,0]
+    );
+    
+    //////////////////////////////////////////////////
+
+    this.slider_a.oninput = function() {
+     me.set_ab((parseInt(this.value) - 100) * 0.04,me.b);
+    }
+    
+    this.slider_b.oninput = function() {
+     me.set_ab(me.a,(parseInt(this.value) - 100) * 0.04);
+    }
+
+    //////////////////////////////////////////////////
+    
+    this.modes = [];
+
+    for (var m of ['clear','max','min','saddle']) {
+     var x = {};
+     this.modes.push(x);
+     x.name = m;
+     x.button = document.getElementById('mode_' + m);
+     x.msg = document.getElementById('msg_' + m);
+
+     if (x.name == 'max') {
+      x.a = 0;
+      x.b = 0;
+      x.r = 0.4;
+      x.col = [1,0,0];
+     } else if (x.name == 'min') {
+      x.a = 2.174626029;
+      x.b = 0;
+      x.r = 0.6;
+      x.col = [0,1,0];
+     } else if (x.name == 'saddle') {
+      x.a = -1.570796327;
+      x.b = -1.570796327;
+      x.r = 0.6;
+      x.col = [0,0,1];
+     }
+
+     if (x.name != 'clear') {
+      x.patch = Object.create(this.owl3.surface);
+      x.patch.a = x.a;
+      x.patch.b = x.b;
+      x.patch.r = x.r;
+      x.patch.owner = this.owl3;
+      x.patch.enabled = 1;
+      x.patch.colour = x.col;
+      x.patch.embedding = function(t,u) {
+       var p = this.a + this.r * t * Math.cos(2 * Math.PI * u);
+       var q = this.b + this.r * t * Math.sin(2 * Math.PI * u);
+       return [p,q,me.h(p,q) + 0.01];
+      }
+      x.patch.make_mesh();
+     }
+    }
+
+    for (x of this.modes) {
+     this.set_button_handler(x);
+    }
+    
+    //////////////////////////////////////////////////
+
+    this.set_mode('clear');
+    this.set_ab(3,3);
+    
+    //////////////////////////////////////////////////
+
+    this.engine.runRenderLoop(function () {
+     if (me.scene) {
+//      me.orient_labels();
+      me.scene.render();
+     }
+    });
+
+    window.addEventListener("resize", function () {
+     me.engine.resize();
+    });
+   }
+
+   demo.set_button_handler = function(x) {
+    var me = this;
+
+    x.button.onclick = function() {
+     me.set_mode(x.name);
+    }
+   }
+
+   demo.set_ab = function(a,b) {
+    this.a = a;
+    this.b = b;
+    this.c = this.h(this.a,this.b);
+    this.m = this.hx(this.a,this.b);
+    this.n = this.hy(this.a,this.b);
+
+    this.stalk.a = [this.a,this.b,0];
+    this.stalk.b = [this.a,this.b,this.c];
+    this.stalk.make_mesh();
+
+    this.stalk_bot.set_position([this.a,this.b,0]);
+    this.stalk_top.set_position([this.a,this.b,this.c]);
+
+    this.x_tangent_line.a = this.fft(this.a - 0.3, this.b);
+    this.x_tangent_line.b = this.fft(this.a + 0.3, this.b),
+    this.y_tangent_line.a = this.fft(this.a, this.b - 0.3);
+    this.y_tangent_line.b = this.fft(this.a, this.b + 0.3);
+
+    this.x_tangent_line.make_mesh();
+    this.y_tangent_line.make_mesh();
+
+    this.display_a.innerHTML = this.a.toFixed(2);
+    this.display_b.innerHTML = this.b.toFixed(2);
+    this.display_f.innerHTML = this.c.toFixed(2);
+    this.display_fx.innerHTML = this.m.toFixed(2);
+    this.display_fy.innerHTML = this.n.toFixed(2);
+   }
+
+   demo.orient_labels = function() {
+    for (x of this.labels) {
+     var n = x.label_plane.position.subtract(this.scene.camera.position);
+     x.source_plane = new BABYLON.Plane(-n.x,-n.y,-n.z,0);
+     x.source_plane.normalize();
+     x.label_plane.setDirection(x.source_plane.normal.scale(-1));     
+    }
+   }
+
+   demo.set_mode = function(m) {
+    for (var y of this.modes) {
+     if (y.name == m) {
+      y.button.className = 'mode_selected';
+      y.msg.style.display = 'block';
+      if (y.patch) {
+       y.patch.set_enabled(1);
+//       this.surface.mesh.material.alpha = 0.3;
+       this.set_ab(y.a,y.b);
+      } else {
+//       this.surface.mesh.material.alpha = 1;
+      }
+     } else {
+      y.button.className = 'mode';
+      y.msg.style.display = 'none';
+      if (y.patch) {
+       y.patch.set_enabled(0);
+      }
+     }
+    }
+   }
+   
+
+   demo.init();
+	  });
+  </script>
+ </body>
+</html>
